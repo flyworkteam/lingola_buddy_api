@@ -1,0 +1,2422 @@
+{
+  "de": {
+    "dc_a1_01": [
+      "Morgengruß",
+      "Tag starten"
+    ],
+    "dc_a1_02": [
+      "Wie war dein Tag?",
+      "Täglicher Check-in"
+    ],
+    "dc_a1_03": [
+      "Mittagsplausch",
+      "Mittagspause"
+    ],
+    "dc_a1_04": [
+      "Lieblingsgetränk",
+      "Café-Smalltalk"
+    ],
+    "dc_a1_05": [
+      "Gerade jetzt",
+      "Im Moment"
+    ],
+    "dc_a1_06": [
+      "Wochenendpläne",
+      "Einfache Zukunft"
+    ],
+    "dc_a1_07": [
+      "Danke & Tschüss",
+      "Höflicher Abschluss"
+    ],
+    "dc_a1_08": [
+      "Wettergespräch",
+      "Smalltalk"
+    ],
+    "dc_a2_01": [
+      "Was gibt's Neues?",
+      "Freundesupdate"
+    ],
+    "dc_a2_02": [
+      "Nach der Arbeit",
+      "Abendentspannung"
+    ],
+    "dc_a2_03": [
+      "Einkaufsgeschichte",
+      "Alltagsbesorgungen"
+    ],
+    "dc_a2_04": [
+      "Kochen heute Abend",
+      "Küchengespräch"
+    ],
+    "dc_a2_05": [
+      "Reiseerinnerung",
+      "Frühere Reise"
+    ],
+    "dc_a2_06": [
+      "Musik & Stimmung",
+      "Playlist"
+    ],
+    "dc_a2_07": [
+      "Nachbarschaftsgespräch",
+      "Lokales Leben"
+    ],
+    "dc_a2_08": [
+      "Handygewohnheiten",
+      "Technik im Alltag"
+    ],
+    "dc_b1_01": [
+      "Kaffeepausendebatte",
+      "Leichte Meinungen"
+    ],
+    "dc_b1_02": [
+      "Work-Life-Balance",
+      "Volle Woche"
+    ],
+    "dc_b1_03": [
+      "Soziale Pläne",
+      "Planung"
+    ],
+    "dc_b1_04": [
+      "Englisch lernen",
+      "Motivation"
+    ],
+    "dc_b1_05": [
+      "Gesunde Gewohnheiten",
+      "Wellness"
+    ],
+    "dc_b1_06": [
+      "Filmabend",
+      "Empfehlungen"
+    ],
+    "dc_b1_07": [
+      "Stadtleben",
+      "Urbanes Gespräch"
+    ],
+    "dc_b1_08": [
+      "Stress & Ruhe",
+      "Gefühle"
+    ],
+    "dc_b1_09": [
+      "Traumreise",
+      "Zukunftschat"
+    ],
+    "dc_b1_10": [
+      "Tagesnachrichten",
+      "Aktuelles"
+    ],
+    "dc_b2_01": [
+      "Remote vs. Büro",
+      "Arbeitskultur"
+    ],
+    "dc_b2_02": [
+      "Beziehungen",
+      "Privatleben"
+    ],
+    "dc_b2_03": [
+      "Geld-Mindset",
+      "Finanzgespräch"
+    ],
+    "dc_b2_04": [
+      "Kultur & Bräuche",
+      "Interkulturell"
+    ],
+    "dc_b2_05": [
+      "Karrierewechsel",
+      "Berufsweg"
+    ],
+    "dc_b2_06": [
+      "Podcasts & Bücher",
+      "Medienkonsum"
+    ],
+    "dc_b2_07": [
+      "Ethische Entscheidungen",
+      "Werte"
+    ],
+    "dc_b2_08": [
+      "Mentoring",
+      "Begleitung"
+    ],
+    "dc_b2_09": [
+      "Kreativitätsblock",
+      "Produktivität"
+    ],
+    "dc_b2_10": [
+      "Zukunft der KI",
+      "Tech-Gesellschaft"
+    ],
+    "dc_c1_01": [
+      "Identität & Zugehörigkeit",
+      "Tiefgreifend persönlich"
+    ],
+    "dc_c1_02": [
+      "Überzeugung im Leben",
+      "Einfluss"
+    ],
+    "dc_c1_03": [
+      "Humor über Kulturen",
+      "Komische Nuancen"
+    ],
+    "dc_c1_04": [
+      "Führungsmomente",
+      "Einfluss"
+    ],
+    "dc_c1_05": [
+      "Privatsphäre & Vertrauen",
+      "Digitales Leben"
+    ],
+    "dc_c1_06": [
+      "Klimagespräche",
+      "Großes Thema"
+    ],
+    "dc_c1_07": [
+      "Kunst, die bewegte",
+      "Ästhetik"
+    ],
+    "dc_c1_08": [
+      "Verhandlungsgeschichte",
+      "Deal-making"
+    ],
+    "dc_c1_09": [
+      "Mentoring-Erfahrung",
+      "Wachstum"
+    ],
+    "dc_c1_10": [
+      "Sprache & Denken",
+      "Sprachwissenschaft"
+    ],
+    "dc_c1_11": [
+      "Risiko & Reue",
+      "Lebensentscheidungen"
+    ],
+    "dc_c1_12": [
+      "Gemeinschaft aufbauen",
+      "Soziales Gefüge"
+    ],
+    "dc_c2_01": [
+      "Philosophie beim Kaffee",
+      "Große Fragen"
+    ],
+    "dc_c2_02": [
+      "Rhetorik in den Medien",
+      "Diskurs"
+    ],
+    "dc_c2_03": [
+      "Macht & Ethik",
+      "Institutionen"
+    ],
+    "dc_c2_04": [
+      "Kreativität & KI",
+      "Zukunft des Handwerks"
+    ],
+    "dc_c2_05": [
+      "Globales Englisch",
+      "Weltsprache"
+    ],
+    "dc_c2_06": [
+      "Erinnerung & Geschichte",
+      "Erzählung"
+    ],
+    "dc_c2_07": [
+      "Wirtschaft & Leben",
+      "Makro–Mikro"
+    ],
+    "dc_c2_08": [
+      "Gerechtigkeitsdebatte",
+      "Moralsysteme"
+    ],
+    "dc_c2_09": [
+      "Wissenschaft & Gesellschaft",
+      "Öffentliches Verständnis"
+    ],
+    "dc_c2_10": [
+      "Improvisationsmeisterkurs",
+      "Ohne Vorbereitung"
+    ],
+    "dc_c2_11": [
+      "Register-Spiel",
+      "Stilwechsel"
+    ],
+    "dc_c2_12": [
+      "Offene Lounge",
+      "Freier Chat"
+    ]
+  },
+  "fr": {
+    "dc_a1_01": [
+      "Bonjour du matin",
+      "Commencer la journée"
+    ],
+    "dc_a1_02": [
+      "Comment s'est passée ta journée ?",
+      "Check-in quotidien"
+    ],
+    "dc_a1_03": [
+      "Pause déjeuner",
+      "Pause de midi"
+    ],
+    "dc_a1_04": [
+      "Boisson préférée",
+      "Small talk au café"
+    ],
+    "dc_a1_05": [
+      "En ce moment",
+      "Instant présent"
+    ],
+    "dc_a1_06": [
+      "Plans du week-end",
+      "Futur simple"
+    ],
+    "dc_a1_07": [
+      "Merci et au revoir",
+      "Clôture polie"
+    ],
+    "dc_a1_08": [
+      "Météo",
+      "Small talk"
+    ],
+    "dc_a2_01": [
+      "Se retrouver",
+      "Mise à jour entre amis"
+    ],
+    "dc_a2_02": [
+      "Après le travail",
+      "Détente du soir"
+    ],
+    "dc_a2_03": [
+      "Histoire de courses",
+      "Courses du quotidien"
+    ],
+    "dc_a2_04": [
+      "Cuisine ce soir",
+      "Discussion cuisine"
+    ],
+    "dc_a2_05": [
+      "Souvenir de voyage",
+      "Voyage passé"
+    ],
+    "dc_a2_06": [
+      "Musique et humeur",
+      "Playlist"
+    ],
+    "dc_a2_07": [
+      "Discussion de quartier",
+      "Vie locale"
+    ],
+    "dc_a2_08": [
+      "Habitudes téléphone",
+      "Tech quotidienne"
+    ],
+    "dc_b1_01": [
+      "Débat pause café",
+      "Opinions légères"
+    ],
+    "dc_b1_02": [
+      "Équilibre vie pro–perso",
+      "Semaine chargée"
+    ],
+    "dc_b1_03": [
+      "Plans sociaux",
+      "Organisation"
+    ],
+    "dc_b1_04": [
+      "Apprendre l'anglais",
+      "Motivation"
+    ],
+    "dc_b1_05": [
+      "Habitudes saines",
+      "Bien-être"
+    ],
+    "dc_b1_06": [
+      "Soirée cinéma",
+      "Recommandations"
+    ],
+    "dc_b1_07": [
+      "Vie en ville",
+      "Discussion urbaine"
+    ],
+    "dc_b1_08": [
+      "Stress et calme",
+      "Émotions"
+    ],
+    "dc_b1_09": [
+      "Voyage de rêve",
+      "Discussion future"
+    ],
+    "dc_b1_10": [
+      "Actualités du jour",
+      "Événements actuels"
+    ],
+    "dc_b2_01": [
+      "Télétravail ou bureau",
+      "Culture du travail"
+    ],
+    "dc_b2_02": [
+      "Relations",
+      "Vie personnelle"
+    ],
+    "dc_b2_03": [
+      "Rapport à l'argent",
+      "Discussion finance"
+    ],
+    "dc_b2_04": [
+      "Culture et coutumes",
+      "Interculturel"
+    ],
+    "dc_b2_05": [
+      "Reconversion",
+      "Parcours professionnel"
+    ],
+    "dc_b2_06": [
+      "Podcasts et livres",
+      "Diète média"
+    ],
+    "dc_b2_07": [
+      "Choix éthiques",
+      "Valeurs"
+    ],
+    "dc_b2_08": [
+      "Mentorat",
+      "Accompagnement"
+    ],
+    "dc_b2_09": [
+      "Blocage créatif",
+      "Productivité"
+    ],
+    "dc_b2_10": [
+      "Avenir de l'IA",
+      "Société tech"
+    ],
+    "dc_c1_01": [
+      "Identité et appartenance",
+      "Personnel profond"
+    ],
+    "dc_c1_02": [
+      "Persuasion au quotidien",
+      "Influence"
+    ],
+    "dc_c1_03": [
+      "Humour interculturel",
+      "Nuances comiques"
+    ],
+    "dc_c1_04": [
+      "Moments de leadership",
+      "Influence"
+    ],
+    "dc_c1_05": [
+      "Vie privée et confiance",
+      "Vie numérique"
+    ],
+    "dc_c1_06": [
+      "Conversations climat",
+      "Grand sujet"
+    ],
+    "dc_c1_07": [
+      "Art qui t'a touché",
+      "Esthétique"
+    ],
+    "dc_c1_08": [
+      "Histoire de négociation",
+      "Conclusion d'accord"
+    ],
+    "dc_c1_09": [
+      "Expérience de mentorat",
+      "Croissance"
+    ],
+    "dc_c1_10": [
+      "Langue et pensée",
+      "Linguistique"
+    ],
+    "dc_c1_11": [
+      "Risque et regret",
+      "Choix de vie"
+    ],
+    "dc_c1_12": [
+      "Construire une communauté",
+      "Tissu social"
+    ],
+    "dc_c2_01": [
+      "Philosophie autour d'un café",
+      "Grandes questions"
+    ],
+    "dc_c2_02": [
+      "Rhétorique dans les médias",
+      "Discours"
+    ],
+    "dc_c2_03": [
+      "Pouvoir et éthique",
+      "Institutions"
+    ],
+    "dc_c2_04": [
+      "Créativité et IA",
+      "Artisanat futur"
+    ],
+    "dc_c2_05": [
+      "Anglais mondial",
+      "Langue mondiale"
+    ],
+    "dc_c2_06": [
+      "Mémoire et récit",
+      "Narration"
+    ],
+    "dc_c2_07": [
+      "Économie et vie",
+      "Macro–micro"
+    ],
+    "dc_c2_08": [
+      "Débat sur la justice",
+      "Systèmes moraux"
+    ],
+    "dc_c2_09": [
+      "Science et société",
+      "Compréhension publique"
+    ],
+    "dc_c2_10": [
+      "Masterclass d'impro",
+      "Sans préparation"
+    ],
+    "dc_c2_11": [
+      "Jeu de registres",
+      "Changement de style"
+    ],
+    "dc_c2_12": [
+      "Salon libre",
+      "Discussion libre"
+    ]
+  },
+  "it": {
+    "dc_a1_01": [
+      "Saluto del mattino",
+      "Iniziare la giornata"
+    ],
+    "dc_a1_02": [
+      "Com'è andata la giornata?",
+      "Check-in quotidiano"
+    ],
+    "dc_a1_03": [
+      "Chiacchierata a pranzo",
+      "Pausa di mezzogiorno"
+    ],
+    "dc_a1_04": [
+      "Bevanda preferita",
+      "Small talk al bar"
+    ],
+    "dc_a1_05": [
+      "Proprio ora",
+      "Momento presente"
+    ],
+    "dc_a1_06": [
+      "Piani del weekend",
+      "Futuro semplice"
+    ],
+    "dc_a1_07": [
+      "Grazie e arrivederci",
+      "Chiusura educata"
+    ],
+    "dc_a1_08": [
+      "Chiacchierata sul tempo",
+      "Small talk"
+    ],
+    "dc_a2_01": [
+      "Aggiornamento tra amici",
+      "Novità"
+    ],
+    "dc_a2_02": [
+      "Dopo il lavoro",
+      "Relax serale"
+    ],
+    "dc_a2_03": [
+      "Storia di spesa",
+      "Commissioni"
+    ],
+    "dc_a2_04": [
+      "Cucina stasera",
+      "Chiacchiera in cucina"
+    ],
+    "dc_a2_05": [
+      "Ricordo di viaggio",
+      "Viaggio passato"
+    ],
+    "dc_a2_06": [
+      "Musica e umore",
+      "Playlist"
+    ],
+    "dc_a2_07": [
+      "Chiacchiera di quartiere",
+      "Vita locale"
+    ],
+    "dc_a2_08": [
+      "Abitudini col telefono",
+      "Tech quotidiana"
+    ],
+    "dc_b1_01": [
+      "Dibattito pausa caffè",
+      "Opinioni leggere"
+    ],
+    "dc_b1_02": [
+      "Equilibrio lavoro–vita",
+      "Settimana intensa"
+    ],
+    "dc_b1_03": [
+      "Piani sociali",
+      "Organizzazione"
+    ],
+    "dc_b1_04": [
+      "Imparare l'inglese",
+      "Motivazione"
+    ],
+    "dc_b1_05": [
+      "Abitudini sane",
+      "Benessere"
+    ],
+    "dc_b1_06": [
+      "Serata film",
+      "Consigli"
+    ],
+    "dc_b1_07": [
+      "Vita in città",
+      "Chiacchiera urbana"
+    ],
+    "dc_b1_08": [
+      "Stress e calma",
+      "Emozioni"
+    ],
+    "dc_b1_09": [
+      "Viaggio dei sogni",
+      "Chiacchiera futura"
+    ],
+    "dc_b1_10": [
+      "Notizie del giorno",
+      "Attualità"
+    ],
+    "dc_b2_01": [
+      "Smart working o ufficio",
+      "Cultura del lavoro"
+    ],
+    "dc_b2_02": [
+      "Relazioni",
+      "Vita personale"
+    ],
+    "dc_b2_03": [
+      "Mentalità sul denaro",
+      "Finanza"
+    ],
+    "dc_b2_04": [
+      "Cultura e usanze",
+      "Interculturale"
+    ],
+    "dc_b2_05": [
+      "Cambio di carriera",
+      "Percorso professionale"
+    ],
+    "dc_b2_06": [
+      "Podcast e libri",
+      "Dieta media"
+    ],
+    "dc_b2_07": [
+      "Scelte etiche",
+      "Valori"
+    ],
+    "dc_b2_08": [
+      "Mentoring",
+      "Guida"
+    ],
+    "dc_b2_09": [
+      "Blocco creativo",
+      "Produttività"
+    ],
+    "dc_b2_10": [
+      "Futuro dell'IA",
+      "Società tech"
+    ],
+    "dc_c1_01": [
+      "Identità e appartenenza",
+      "Personale profondo"
+    ],
+    "dc_c1_02": [
+      "Persuasione nella vita",
+      "Influenza"
+    ],
+    "dc_c1_03": [
+      "Umorismo tra culture",
+      "Sfumature comiche"
+    ],
+    "dc_c1_04": [
+      "Momenti di leadership",
+      "Influenza"
+    ],
+    "dc_c1_05": [
+      "Privacy e fiducia",
+      "Vita digitale"
+    ],
+    "dc_c1_06": [
+      "Conversazioni sul clima",
+      "Grande tema"
+    ],
+    "dc_c1_07": [
+      "Arte che ti ha colpito",
+      "Estetica"
+    ],
+    "dc_c1_08": [
+      "Storia di negoziazione",
+      "Accordo"
+    ],
+    "dc_c1_09": [
+      "Esperienza di mentoring",
+      "Crescita"
+    ],
+    "dc_c1_10": [
+      "Lingua e pensiero",
+      "Linguistica"
+    ],
+    "dc_c1_11": [
+      "Rischio e rimpianto",
+      "Scelte di vita"
+    ],
+    "dc_c1_12": [
+      "Costruire comunità",
+      "Tessuto sociale"
+    ],
+    "dc_c2_01": [
+      "Filosofia al caffè",
+      "Grandi domande"
+    ],
+    "dc_c2_02": [
+      "Retorica nei media",
+      "Discorso"
+    ],
+    "dc_c2_03": [
+      "Potere ed etica",
+      "Istituzioni"
+    ],
+    "dc_c2_04": [
+      "Creatività e IA",
+      "Mestiere futuro"
+    ],
+    "dc_c2_05": [
+      "Inglese globale",
+      "Lingua mondiale"
+    ],
+    "dc_c2_06": [
+      "Memoria e storia",
+      "Narrazione"
+    ],
+    "dc_c2_07": [
+      "Economia e vita",
+      "Macro–micro"
+    ],
+    "dc_c2_08": [
+      "Dibattito sulla giustizia",
+      "Sistemi morali"
+    ],
+    "dc_c2_09": [
+      "Scienza e società",
+      "Comprensione pubblica"
+    ],
+    "dc_c2_10": [
+      "Masterclass improvvisata",
+      "Senza preparazione"
+    ],
+    "dc_c2_11": [
+      "Gioco di registro",
+      "Cambio stile"
+    ],
+    "dc_c2_12": [
+      "Lounge aperta",
+      "Chat libera"
+    ]
+  },
+  "es": {
+    "dc_a1_01": [
+      "Saludo matutino",
+      "Empezar el día"
+    ],
+    "dc_a1_02": [
+      "¿Qué tal tu día?",
+      "Check-in diario"
+    ],
+    "dc_a1_03": [
+      "Charla del almuerzo",
+      "Pausa del mediodía"
+    ],
+    "dc_a1_04": [
+      "Bebida favorita",
+      "Charla de café"
+    ],
+    "dc_a1_05": [
+      "Ahora mismo",
+      "Momento presente"
+    ],
+    "dc_a1_06": [
+      "Planes de fin de semana",
+      "Futuro simple"
+    ],
+    "dc_a1_07": [
+      "Gracias y adiós",
+      "Cierre educado"
+    ],
+    "dc_a1_08": [
+      "Charla del tiempo",
+      "Small talk"
+    ],
+    "dc_a2_01": [
+      "Ponerse al día",
+      "Actualización entre amigos"
+    ],
+    "dc_a2_02": [
+      "Después del trabajo",
+      "Relax nocturno"
+    ],
+    "dc_a2_03": [
+      "Historia de compras",
+      "Recados"
+    ],
+    "dc_a2_04": [
+      "Cocinar esta noche",
+      "Charla de cocina"
+    ],
+    "dc_a2_05": [
+      "Recuerdo de viaje",
+      "Viaje pasado"
+    ],
+    "dc_a2_06": [
+      "Música y ánimo",
+      "Playlist"
+    ],
+    "dc_a2_07": [
+      "Charla con vecinos",
+      "Vida local"
+    ],
+    "dc_a2_08": [
+      "Hábitos del móvil",
+      "Tecnología diaria"
+    ],
+    "dc_b1_01": [
+      "Debate en la pausa del café",
+      "Opiniones ligeras"
+    ],
+    "dc_b1_02": [
+      "Equilibrio trabajo–vida",
+      "Semana ocupada"
+    ],
+    "dc_b1_03": [
+      "Planes sociales",
+      "Organización"
+    ],
+    "dc_b1_04": [
+      "Aprender inglés",
+      "Motivación"
+    ],
+    "dc_b1_05": [
+      "Hábitos saludables",
+      "Bienestar"
+    ],
+    "dc_b1_06": [
+      "Noche de película",
+      "Recomendaciones"
+    ],
+    "dc_b1_07": [
+      "Vida en la ciudad",
+      "Charla urbana"
+    ],
+    "dc_b1_08": [
+      "Estrés y calma",
+      "Emociones"
+    ],
+    "dc_b1_09": [
+      "Viaje soñado",
+      "Charla futura"
+    ],
+    "dc_b1_10": [
+      "Noticias del día",
+      "Actualidad"
+    ],
+    "dc_b2_01": [
+      "¿Remoto u oficina?",
+      "Cultura laboral"
+    ],
+    "dc_b2_02": [
+      "Relaciones",
+      "Vida personal"
+    ],
+    "dc_b2_03": [
+      "Mentalidad del dinero",
+      "Finanzas"
+    ],
+    "dc_b2_04": [
+      "Cultura y costumbres",
+      "Intercultural"
+    ],
+    "dc_b2_05": [
+      "Cambio de carrera",
+      "Trayectoria profesional"
+    ],
+    "dc_b2_06": [
+      "Podcasts y libros",
+      "Dieta mediática"
+    ],
+    "dc_b2_07": [
+      "Decisiones éticas",
+      "Valores"
+    ],
+    "dc_b2_08": [
+      "Mentoría",
+      "Orientación"
+    ],
+    "dc_b2_09": [
+      "Bloqueo creativo",
+      "Productividad"
+    ],
+    "dc_b2_10": [
+      "Futuro de la IA",
+      "Sociedad tech"
+    ],
+    "dc_c1_01": [
+      "Identidad y pertenencia",
+      "Personal profundo"
+    ],
+    "dc_c1_02": [
+      "Persuasión en la vida",
+      "Influencia"
+    ],
+    "dc_c1_03": [
+      "Humor entre culturas",
+      "Matices cómicos"
+    ],
+    "dc_c1_04": [
+      "Momentos de liderazgo",
+      "Influencia"
+    ],
+    "dc_c1_05": [
+      "Privacidad y confianza",
+      "Vida digital"
+    ],
+    "dc_c1_06": [
+      "Conversaciones climáticas",
+      "Gran tema"
+    ],
+    "dc_c1_07": [
+      "Arte que te marcó",
+      "Estética"
+    ],
+    "dc_c1_08": [
+      "Historia de negociación",
+      "Acuerdo"
+    ],
+    "dc_c1_09": [
+      "Experiencia de mentoría",
+      "Crecimiento"
+    ],
+    "dc_c1_10": [
+      "Lengua y pensamiento",
+      "Lingüística"
+    ],
+    "dc_c1_11": [
+      "Riesgo y arrepentimiento",
+      "Decisiones vitales"
+    ],
+    "dc_c1_12": [
+      "Construir comunidad",
+      "Tejido social"
+    ],
+    "dc_c2_01": [
+      "Filosofía con café",
+      "Grandes preguntas"
+    ],
+    "dc_c2_02": [
+      "Retórica en medios",
+      "Discurso"
+    ],
+    "dc_c2_03": [
+      "Poder y ética",
+      "Instituciones"
+    ],
+    "dc_c2_04": [
+      "Creatividad e IA",
+      "Oficio futuro"
+    ],
+    "dc_c2_05": [
+      "Inglés global",
+      "Lengua mundial"
+    ],
+    "dc_c2_06": [
+      "Memoria e historia",
+      "Narrativa"
+    ],
+    "dc_c2_07": [
+      "Economía y vida",
+      "Macro–micro"
+    ],
+    "dc_c2_08": [
+      "Debate sobre justicia",
+      "Sistemas morales"
+    ],
+    "dc_c2_09": [
+      "Ciencia y sociedad",
+      "Comprensión pública"
+    ],
+    "dc_c2_10": [
+      "Clase magistral improvisada",
+      "Sin preparación"
+    ],
+    "dc_c2_11": [
+      "Juego de registro",
+      "Cambio de estilo"
+    ],
+    "dc_c2_12": [
+      "Salón abierto",
+      "Charla libre"
+    ]
+  },
+  "pt": {
+    "dc_a1_01": [
+      "Saudação matinal",
+      "Começar o dia"
+    ],
+    "dc_a1_02": [
+      "Como foi o seu dia?",
+      "Check-in diário"
+    ],
+    "dc_a1_03": [
+      "Conversa do almoço",
+      "Pausa do meio-dia"
+    ],
+    "dc_a1_04": [
+      "Bebida favorita",
+      "Conversa de café"
+    ],
+    "dc_a1_05": [
+      "Agora mesmo",
+      "Momento presente"
+    ],
+    "dc_a1_06": [
+      "Planos de fim de semana",
+      "Futuro simples"
+    ],
+    "dc_a1_07": [
+      "Obrigado e tchau",
+      "Encerramento educado"
+    ],
+    "dc_a1_08": [
+      "Conversa sobre o tempo",
+      "Small talk"
+    ],
+    "dc_a2_01": [
+      "Colocar o papo em dia",
+      "Atualização entre amigos"
+    ],
+    "dc_a2_02": [
+      "Depois do trabalho",
+      "Relaxar à noite"
+    ],
+    "dc_a2_03": [
+      "História de compras",
+      "Recados"
+    ],
+    "dc_a2_04": [
+      "Cozinhar hoje à noite",
+      "Conversa na cozinha"
+    ],
+    "dc_a2_05": [
+      "Memória de viagem",
+      "Viagem passada"
+    ],
+    "dc_a2_06": [
+      "Música e humor",
+      "Playlist"
+    ],
+    "dc_a2_07": [
+      "Conversa com vizinhos",
+      "Vida local"
+    ],
+    "dc_a2_08": [
+      "Hábitos do celular",
+      "Tecnologia diária"
+    ],
+    "dc_b1_01": [
+      "Debate na pausa do café",
+      "Opiniões leves"
+    ],
+    "dc_b1_02": [
+      "Equilíbrio trabalho–vida",
+      "Semana cheia"
+    ],
+    "dc_b1_03": [
+      "Planos sociais",
+      "Organização"
+    ],
+    "dc_b1_04": [
+      "Aprender inglês",
+      "Motivação"
+    ],
+    "dc_b1_05": [
+      "Hábitos saudáveis",
+      "Bem-estar"
+    ],
+    "dc_b1_06": [
+      "Noite de filme",
+      "Recomendações"
+    ],
+    "dc_b1_07": [
+      "Vida na cidade",
+      "Conversa urbana"
+    ],
+    "dc_b1_08": [
+      "Estresse e calma",
+      "Emoções"
+    ],
+    "dc_b1_09": [
+      "Viagem dos sonhos",
+      "Conversa futura"
+    ],
+    "dc_b1_10": [
+      "Notícias do dia",
+      "Atualidades"
+    ],
+    "dc_b2_01": [
+      "Remoto ou escritório?",
+      "Cultura de trabalho"
+    ],
+    "dc_b2_02": [
+      "Relacionamentos",
+      "Vida pessoal"
+    ],
+    "dc_b2_03": [
+      "Mentalidade financeira",
+      "Finanças"
+    ],
+    "dc_b2_04": [
+      "Cultura e costumes",
+      "Intercultural"
+    ],
+    "dc_b2_05": [
+      "Mudança de carreira",
+      "Trajetória profissional"
+    ],
+    "dc_b2_06": [
+      "Podcasts e livros",
+      "Dieta de mídia"
+    ],
+    "dc_b2_07": [
+      "Escolhas éticas",
+      "Valores"
+    ],
+    "dc_b2_08": [
+      "Mentoria",
+      "Orientação"
+    ],
+    "dc_b2_09": [
+      "Bloqueio criativo",
+      "Produtividade"
+    ],
+    "dc_b2_10": [
+      "Futuro da IA",
+      "Sociedade tech"
+    ],
+    "dc_c1_01": [
+      "Identidade e pertencimento",
+      "Pessoal profundo"
+    ],
+    "dc_c1_02": [
+      "Persuasão na vida",
+      "Influência"
+    ],
+    "dc_c1_03": [
+      "Humor entre culturas",
+      "Nuances cômicas"
+    ],
+    "dc_c1_04": [
+      "Momentos de liderança",
+      "Influência"
+    ],
+    "dc_c1_05": [
+      "Privacidade e confiança",
+      "Vida digital"
+    ],
+    "dc_c1_06": [
+      "Conversas sobre clima",
+      "Grande tema"
+    ],
+    "dc_c1_07": [
+      "Arte que te marcou",
+      "Estética"
+    ],
+    "dc_c1_08": [
+      "História de negociação",
+      "Acordo"
+    ],
+    "dc_c1_09": [
+      "Experiência de mentoria",
+      "Crescimento"
+    ],
+    "dc_c1_10": [
+      "Língua e pensamento",
+      "Linguística"
+    ],
+    "dc_c1_11": [
+      "Risco e arrependimento",
+      "Escolhas de vida"
+    ],
+    "dc_c1_12": [
+      "Construir comunidade",
+      "Tecido social"
+    ],
+    "dc_c2_01": [
+      "Filosofia no café",
+      "Grandes perguntas"
+    ],
+    "dc_c2_02": [
+      "Retórica na mídia",
+      "Discurso"
+    ],
+    "dc_c2_03": [
+      "Poder e ética",
+      "Instituições"
+    ],
+    "dc_c2_04": [
+      "Criatividade e IA",
+      "Ofício do futuro"
+    ],
+    "dc_c2_05": [
+      "Inglês global",
+      "Língua mundial"
+    ],
+    "dc_c2_06": [
+      "Memória e história",
+      "Narrativa"
+    ],
+    "dc_c2_07": [
+      "Economia e vida",
+      "Macro–micro"
+    ],
+    "dc_c2_08": [
+      "Debate sobre justiça",
+      "Sistemas morais"
+    ],
+    "dc_c2_09": [
+      "Ciência e sociedade",
+      "Compreensão pública"
+    ],
+    "dc_c2_10": [
+      "Aula improvisada",
+      "Sem preparação"
+    ],
+    "dc_c2_11": [
+      "Jogo de registro",
+      "Mudança de estilo"
+    ],
+    "dc_c2_12": [
+      "Lounge aberta",
+      "Conversa livre"
+    ]
+  },
+  "ja": {
+    "dc_a1_01": [
+      "朝のあいさつ",
+      "一日の始まり"
+    ],
+    "dc_a1_02": [
+      "今日はどうだった？",
+      "毎日のチェックイン"
+    ],
+    "dc_a1_03": [
+      "ランチタイムの雑談",
+      "昼休み"
+    ],
+    "dc_a1_04": [
+      "好きな飲み物",
+      "カフェの雑談"
+    ],
+    "dc_a1_05": [
+      "今この瞬間",
+      "いまの話題"
+    ],
+    "dc_a1_06": [
+      "週末の予定",
+      "シンプルな未来"
+    ],
+    "dc_a1_07": [
+      "お礼とさようなら",
+      "丁寧な締め"
+    ],
+    "dc_a1_08": [
+      "天気の話",
+      "雑談"
+    ],
+    "dc_a2_01": [
+      "近況トーク",
+      "友だちアップデート"
+    ],
+    "dc_a2_02": [
+      "仕事のあと",
+      "夜のリラックス"
+    ],
+    "dc_a2_03": [
+      "買い物エピソード",
+      "日常の用事"
+    ],
+    "dc_a2_04": [
+      "今夜の料理",
+      "キッチントーク"
+    ],
+    "dc_a2_05": [
+      "旅行の思い出",
+      "過去の旅"
+    ],
+    "dc_a2_06": [
+      "音楽と気分",
+      "プレイリスト"
+    ],
+    "dc_a2_07": [
+      "近所の話",
+      "地域の生活"
+    ],
+    "dc_a2_08": [
+      "スマホの習慣",
+      "日常のテック"
+    ],
+    "dc_b1_01": [
+      "コーヒーブレイク討論",
+      "軽い意見"
+    ],
+    "dc_b1_02": [
+      "ワークライフバランス",
+      "忙しい一週間"
+    ],
+    "dc_b1_03": [
+      "社交の予定",
+      "計画づくり"
+    ],
+    "dc_b1_04": [
+      "英語学習",
+      "モチベーション"
+    ],
+    "dc_b1_05": [
+      "健康的な習慣",
+      "ウェルネス"
+    ],
+    "dc_b1_06": [
+      "映画の夜",
+      "おすすめ"
+    ],
+    "dc_b1_07": [
+      "都市生活",
+      "都会の話"
+    ],
+    "dc_b1_08": [
+      "ストレスと落ち着き",
+      "感情"
+    ],
+    "dc_b1_09": [
+      "夢の旅",
+      "未来の話"
+    ],
+    "dc_b1_10": [
+      "今日のニュース",
+      "時事"
+    ],
+    "dc_b2_01": [
+      "リモートかオフィスか",
+      "仕事文化"
+    ],
+    "dc_b2_02": [
+      "人間関係",
+      "私生活"
+    ],
+    "dc_b2_03": [
+      "お金の考え方",
+      "お金の話"
+    ],
+    "dc_b2_04": [
+      "文化と習慣",
+      "異文化"
+    ],
+    "dc_b2_05": [
+      "キャリア転換",
+      "職業の道"
+    ],
+    "dc_b2_06": [
+      "ポッドキャストと本",
+      "メディア"
+    ],
+    "dc_b2_07": [
+      "倫理の選択",
+      "価値観"
+    ],
+    "dc_b2_08": [
+      "メンタリング",
+      "ガイダンス"
+    ],
+    "dc_b2_09": [
+      "創造の行き詰まり",
+      "生産性"
+    ],
+    "dc_b2_10": [
+      "AIの未来",
+      "テック社会"
+    ],
+    "dc_c1_01": [
+      "アイデンティティと所属",
+      "深い個人的話"
+    ],
+    "dc_c1_02": [
+      "説得の瞬間",
+      "影響力"
+    ],
+    "dc_c1_03": [
+      "文化を越えるユーモア",
+      "コメディのニュアンス"
+    ],
+    "dc_c1_04": [
+      "リーダーシップの瞬間",
+      "影響力"
+    ],
+    "dc_c1_05": [
+      "プライバシーと信頼",
+      "デジタル生活"
+    ],
+    "dc_c1_06": [
+      "気候の会話",
+      "大きなテーマ"
+    ],
+    "dc_c1_07": [
+      "心を動かした芸術",
+      "美学"
+    ],
+    "dc_c1_08": [
+      "交渉の話",
+      "合意づくり"
+    ],
+    "dc_c1_09": [
+      "メンター体験",
+      "成長"
+    ],
+    "dc_c1_10": [
+      "言語と思考",
+      "言語学"
+    ],
+    "dc_c1_11": [
+      "リスクと後悔",
+      "人生の選択"
+    ],
+    "dc_c1_12": [
+      "コミュニティづくり",
+      "社会的つながり"
+    ],
+    "dc_c2_01": [
+      "コーヒーと哲学",
+      "大きな問い"
+    ],
+    "dc_c2_02": [
+      "メディアのレトリック",
+      "言説"
+    ],
+    "dc_c2_03": [
+      "権力と倫理",
+      "制度"
+    ],
+    "dc_c2_04": [
+      "創造性とAI",
+      "未来の職"
+    ],
+    "dc_c2_05": [
+      "グローバル英語",
+      "世界語"
+    ],
+    "dc_c2_06": [
+      "記憶と物語",
+      "ナラティブ"
+    ],
+    "dc_c2_07": [
+      "経済と生活",
+      "マクロとミクロ"
+    ],
+    "dc_c2_08": [
+      "正義の議論",
+      "道徳体系"
+    ],
+    "dc_c2_09": [
+      "科学と社会",
+      "公共理解"
+    ],
+    "dc_c2_10": [
+      "即興マスタークラス",
+      "準備なし"
+    ],
+    "dc_c2_11": [
+      "レジスター遊び",
+      "スタイル転換"
+    ],
+    "dc_c2_12": [
+      "オープンラウンジ",
+      "自由な会話"
+    ]
+  },
+  "ko": {
+    "dc_a1_01": [
+      "아침 인사",
+      "하루 시작"
+    ],
+    "dc_a1_02": [
+      "오늘 하루 어땠어요?",
+      "일일 체크인"
+    ],
+    "dc_a1_03": [
+      "점심 수다",
+      "점심 휴식"
+    ],
+    "dc_a1_04": [
+      "좋아하는 음료",
+      "카페 스몰토크"
+    ],
+    "dc_a1_05": [
+      "지금 이 순간",
+      "현재 이야기"
+    ],
+    "dc_a1_06": [
+      "주말 계획",
+      "간단한 미래"
+    ],
+    "dc_a1_07": [
+      "감사와 작별",
+      "정중한 마무리"
+    ],
+    "dc_a1_08": [
+      "날씨 이야기",
+      "스몰토크"
+    ],
+    "dc_a2_01": [
+      "근황 톡",
+      "친구 업데이트"
+    ],
+    "dc_a2_02": [
+      "퇴근 후",
+      "저녁 휴식"
+    ],
+    "dc_a2_03": [
+      "쇼핑 이야기",
+      "일상 심부름"
+    ],
+    "dc_a2_04": [
+      "오늘 저녁 요리",
+      "주방 대화"
+    ],
+    "dc_a2_05": [
+      "여행 추억",
+      "지난 여행"
+    ],
+    "dc_a2_06": [
+      "음악과 기분",
+      "플레이리스트"
+    ],
+    "dc_a2_07": [
+      "이웃 이야기",
+      "동네 생활"
+    ],
+    "dc_a2_08": [
+      "폰 습관",
+      "일상 테크"
+    ],
+    "dc_b1_01": [
+      "커피 브레이크 토론",
+      "가벼운 의견"
+    ],
+    "dc_b1_02": [
+      "일과 삶의 균형",
+      "바쁜 한 주"
+    ],
+    "dc_b1_03": [
+      "모임 계획",
+      "계획 세우기"
+    ],
+    "dc_b1_04": [
+      "영어 배우기",
+      "동기"
+    ],
+    "dc_b1_05": [
+      "건강한 습관",
+      "웰니스"
+    ],
+    "dc_b1_06": [
+      "영화의 밤",
+      "추천"
+    ],
+    "dc_b1_07": [
+      "도시 생활",
+      "도시 대화"
+    ],
+    "dc_b1_08": [
+      "스트레스와 평온",
+      "감정"
+    ],
+    "dc_b1_09": [
+      "꿈의 여행",
+      "미래 대화"
+    ],
+    "dc_b1_10": [
+      "오늘의 뉴스",
+      "시사"
+    ],
+    "dc_b2_01": [
+      "재택 vs 사무실",
+      "직장 문화"
+    ],
+    "dc_b2_02": [
+      "관계",
+      "개인 생활"
+    ],
+    "dc_b2_03": [
+      "돈 마인드셋",
+      "재정 대화"
+    ],
+    "dc_b2_04": [
+      "문화와 관습",
+      "문화 간"
+    ],
+    "dc_b2_05": [
+      "커리어 전환",
+      "직업 경로"
+    ],
+    "dc_b2_06": [
+      "팟캐스트와 책",
+      "미디어"
+    ],
+    "dc_b2_07": [
+      "윤리적 선택",
+      "가치"
+    ],
+    "dc_b2_08": [
+      "멘토링",
+      "안내"
+    ],
+    "dc_b2_09": [
+      "창의성 막힘",
+      "생산성"
+    ],
+    "dc_b2_10": [
+      "AI의 미래",
+      "테크 사회"
+    ],
+    "dc_c1_01": [
+      "정체성과 소속",
+      "깊은 개인"
+    ],
+    "dc_c1_02": [
+      "설득의 순간",
+      "영향력"
+    ],
+    "dc_c1_03": [
+      "문화 간 유머",
+      "코믹 뉘앙스"
+    ],
+    "dc_c1_04": [
+      "리더십 순간",
+      "영향력"
+    ],
+    "dc_c1_05": [
+      "프라이버시와 신뢰",
+      "디지털 생활"
+    ],
+    "dc_c1_06": [
+      "기후 대화",
+      "큰 주제"
+    ],
+    "dc_c1_07": [
+      "마음을 움직인 예술",
+      "미학"
+    ],
+    "dc_c1_08": [
+      "협상 이야기",
+      "합의"
+    ],
+    "dc_c1_09": [
+      "멘토 경험",
+      "성장"
+    ],
+    "dc_c1_10": [
+      "언어와 사고",
+      "언어학"
+    ],
+    "dc_c1_11": [
+      "위험과 후회",
+      "인생 선택"
+    ],
+    "dc_c1_12": [
+      "커뮤니티 만들기",
+      "사회적 연결"
+    ],
+    "dc_c2_01": [
+      "커피와 철학",
+      "큰 질문"
+    ],
+    "dc_c2_02": [
+      "미디어의 수사",
+      "담론"
+    ],
+    "dc_c2_03": [
+      "권력과 윤리",
+      "제도"
+    ],
+    "dc_c2_04": [
+      "창의성과 AI",
+      "미래 직업"
+    ],
+    "dc_c2_05": [
+      "글로벌 영어",
+      "세계어"
+    ],
+    "dc_c2_06": [
+      "기억과 이야기",
+      "서사"
+    ],
+    "dc_c2_07": [
+      "경제와 삶",
+      "거시–미시"
+    ],
+    "dc_c2_08": [
+      "정의 토론",
+      "도덕 체계"
+    ],
+    "dc_c2_09": [
+      "과학과 사회",
+      "공공 이해"
+    ],
+    "dc_c2_10": [
+      "즉흥 마스터클래스",
+      "준비 없음"
+    ],
+    "dc_c2_11": [
+      "어조 놀이",
+      "스타일 전환"
+    ],
+    "dc_c2_12": [
+      "오픈 라운지",
+      "자유 대화"
+    ]
+  },
+  "zh": {
+    "dc_a1_01": [
+      "早晨问候",
+      "开始一天"
+    ],
+    "dc_a1_02": [
+      "今天过得怎么样？",
+      "每日问候"
+    ],
+    "dc_a1_03": [
+      "午餐闲聊",
+      "午间休息"
+    ],
+    "dc_a1_04": [
+      "最爱的饮品",
+      "咖啡馆闲聊"
+    ],
+    "dc_a1_05": [
+      "此刻",
+      "当下话题"
+    ],
+    "dc_a1_06": [
+      "周末计划",
+      "简单未来"
+    ],
+    "dc_a1_07": [
+      "感谢与告别",
+      "礼貌收尾"
+    ],
+    "dc_a1_08": [
+      "天气闲聊",
+      "寒暄"
+    ],
+    "dc_a2_01": [
+      "近况聊聊",
+      "朋友近况"
+    ],
+    "dc_a2_02": [
+      "下班后",
+      "晚间放松"
+    ],
+    "dc_a2_03": [
+      "购物故事",
+      "日常琐事"
+    ],
+    "dc_a2_04": [
+      "今晚做饭",
+      "厨房话题"
+    ],
+    "dc_a2_05": [
+      "旅行回忆",
+      "过往旅程"
+    ],
+    "dc_a2_06": [
+      "音乐与心情",
+      "歌单"
+    ],
+    "dc_a2_07": [
+      "邻里闲聊",
+      "社区生活"
+    ],
+    "dc_a2_08": [
+      "手机习惯",
+      "日常科技"
+    ],
+    "dc_b1_01": [
+      "咖啡休息辩论",
+      "轻松观点"
+    ],
+    "dc_b1_02": [
+      "工作生活平衡",
+      "忙碌一周"
+    ],
+    "dc_b1_03": [
+      "社交计划",
+      "做计划"
+    ],
+    "dc_b1_04": [
+      "学英语",
+      "动力"
+    ],
+    "dc_b1_05": [
+      "健康习惯",
+      "身心健康"
+    ],
+    "dc_b1_06": [
+      "电影之夜",
+      "推荐"
+    ],
+    "dc_b1_07": [
+      "城市生活",
+      "都市话题"
+    ],
+    "dc_b1_08": [
+      "压力与平静",
+      "情绪"
+    ],
+    "dc_b1_09": [
+      "梦想之旅",
+      "未来话题"
+    ],
+    "dc_b1_10": [
+      "每日新闻",
+      "时事"
+    ],
+    "dc_b2_01": [
+      "远程还是办公室",
+      "工作文化"
+    ],
+    "dc_b2_02": [
+      "人际关系",
+      "私人生活"
+    ],
+    "dc_b2_03": [
+      "金钱观念",
+      "理财话题"
+    ],
+    "dc_b2_04": [
+      "文化与习俗",
+      "跨文化"
+    ],
+    "dc_b2_05": [
+      "职业转型",
+      "职业路径"
+    ],
+    "dc_b2_06": [
+      "播客与书籍",
+      "媒体摄入"
+    ],
+    "dc_b2_07": [
+      "伦理选择",
+      "价值观"
+    ],
+    "dc_b2_08": [
+      "导师经历",
+      "指导"
+    ],
+    "dc_b2_09": [
+      "创意瓶颈",
+      "生产力"
+    ],
+    "dc_b2_10": [
+      "AI的未来",
+      "科技社会"
+    ],
+    "dc_c1_01": [
+      "身份与归属",
+      "深层个人"
+    ],
+    "dc_c1_02": [
+      "说服时刻",
+      "影响力"
+    ],
+    "dc_c1_03": [
+      "跨文化幽默",
+      "喜剧细微"
+    ],
+    "dc_c1_04": [
+      "领导力时刻",
+      "影响力"
+    ],
+    "dc_c1_05": [
+      "隐私与信任",
+      "数字生活"
+    ],
+    "dc_c1_06": [
+      "气候对话",
+      "大话题"
+    ],
+    "dc_c1_07": [
+      "触动你的艺术",
+      "美学"
+    ],
+    "dc_c1_08": [
+      "谈判故事",
+      "达成协议"
+    ],
+    "dc_c1_09": [
+      "导师体验",
+      "成长"
+    ],
+    "dc_c1_10": [
+      "语言与思维",
+      "语言学"
+    ],
+    "dc_c1_11": [
+      "风险与遗憾",
+      "人生选择"
+    ],
+    "dc_c1_12": [
+      "建设社区",
+      "社会纽带"
+    ],
+    "dc_c2_01": [
+      "咖啡哲学",
+      "大问题"
+    ],
+    "dc_c2_02": [
+      "媒体修辞",
+      "话语"
+    ],
+    "dc_c2_03": [
+      "权力与伦理",
+      "制度"
+    ],
+    "dc_c2_04": [
+      "创意与AI",
+      "未来技艺"
+    ],
+    "dc_c2_05": [
+      "全球英语",
+      "世界语言"
+    ],
+    "dc_c2_06": [
+      "记忆与故事",
+      "叙事"
+    ],
+    "dc_c2_07": [
+      "经济与生活",
+      "宏观微观"
+    ],
+    "dc_c2_08": [
+      "正义辩论",
+      "道德体系"
+    ],
+    "dc_c2_09": [
+      "科学与社会",
+      "公众理解"
+    ],
+    "dc_c2_10": [
+      "即兴大师课",
+      "无准备"
+    ],
+    "dc_c2_11": [
+      "语域游戏",
+      "风格切换"
+    ],
+    "dc_c2_12": [
+      "开放沙龙",
+      "自由聊天"
+    ]
+  },
+  "hi": {
+    "dc_a1_01": [
+      "सुबह का अभिवादन",
+      "दिन की शुरुआत"
+    ],
+    "dc_a1_02": [
+      "आपका दिन कैसा रहा?",
+      "दैनिक चेक-इन"
+    ],
+    "dc_a1_03": [
+      "लंच की बातचीत",
+      "दोपहर का ब्रेक"
+    ],
+    "dc_a1_04": [
+      "पसंदीदा पेय",
+      "कैफ़े की हल्की बात"
+    ],
+    "dc_a1_05": [
+      "अभी इस वक्त",
+      "वर्तमान पल"
+    ],
+    "dc_a1_06": [
+      "वीकेंड की योजना",
+      "साधारण भविष्य"
+    ],
+    "dc_a1_07": [
+      "धन्यवाद और विदा",
+      "विनम्र समापन"
+    ],
+    "dc_a1_08": [
+      "मौसम की बात",
+      "छोटी बातचीत"
+    ],
+    "dc_a2_01": [
+      "कैच-अप",
+      "दोस्तों का अपडेट"
+    ],
+    "dc_a2_02": [
+      "काम के बाद",
+      "शाम की आराम"
+    ],
+    "dc_a2_03": [
+      "खरीदारी की कहानी",
+      "रोज़ के काम"
+    ],
+    "dc_a2_04": [
+      "आज रात खाना",
+      "रसोई की बात"
+    ],
+    "dc_a2_05": [
+      "यात्रा की याद",
+      "पिछली यात्रा"
+    ],
+    "dc_a2_06": [
+      "संगीत और मूड",
+      "प्लेलिस्ट"
+    ],
+    "dc_a2_07": [
+      "पड़ोस की बात",
+      "स्थानीय जीवन"
+    ],
+    "dc_a2_08": [
+      "फ़ोन की आदतें",
+      "रोज़ की टेक"
+    ],
+    "dc_b1_01": [
+      "कॉफ़ी ब्रेक बहस",
+      "हल्की राय"
+    ],
+    "dc_b1_02": [
+      "काम–जीवन संतुलन",
+      "व्यस्त सप्ताह"
+    ],
+    "dc_b1_03": [
+      "सामाजिक योजनाएँ",
+      "योजना बनाना"
+    ],
+    "dc_b1_04": [
+      "अंग्रेज़ी सीखना",
+      "प्रेरणा"
+    ],
+    "dc_b1_05": [
+      "स्वस्थ आदतें",
+      "कल्याण"
+    ],
+    "dc_b1_06": [
+      "फ़िल्म की रात",
+      "सिफ़ारिशें"
+    ],
+    "dc_b1_07": [
+      "शहर का जीवन",
+      "शहरी बात"
+    ],
+    "dc_b1_08": [
+      "तनाव और शांति",
+      "भावनाएँ"
+    ],
+    "dc_b1_09": [
+      "सपनों की यात्रा",
+      "भविष्य की बात"
+    ],
+    "dc_b1_10": [
+      "दैनिक समाचार",
+      "चर्चा का विषय"
+    ],
+    "dc_b2_01": [
+      "रिमोट या ऑफिस",
+      "काम की संस्कृति"
+    ],
+    "dc_b2_02": [
+      "रिश्ते",
+      "निजी जीवन"
+    ],
+    "dc_b2_03": [
+      "पैसे की सोच",
+      "वित्त की बात"
+    ],
+    "dc_b2_04": [
+      "संस्कृति और रीति",
+      "अंतर-सांस्कृतिक"
+    ],
+    "dc_b2_05": [
+      "करियर बदलाव",
+      "पेशेवर रास्ता"
+    ],
+    "dc_b2_06": [
+      "पॉडकास्ट और किताबें",
+      "मीडिया"
+    ],
+    "dc_b2_07": [
+      "नैतिक चुनाव",
+      "मूल्य"
+    ],
+    "dc_b2_08": [
+      "मेंटरिंग",
+      "मार्गदर्शन"
+    ],
+    "dc_b2_09": [
+      "रचनात्मक अवरोध",
+      "उत्पादकता"
+    ],
+    "dc_b2_10": [
+      "AI का भविष्य",
+      "टेक समाज"
+    ],
+    "dc_c1_01": [
+      "पहचान और अपनापन",
+      "गहन व्यक्तिगत"
+    ],
+    "dc_c1_02": [
+      "प्रेरणा का क्षण",
+      "प्रभाव"
+    ],
+    "dc_c1_03": [
+      "संस्कृतियों में हास्य",
+      "हास्य के सूक्ष्म"
+    ],
+    "dc_c1_04": [
+      "नेतृत्व के पल",
+      "प्रभाव"
+    ],
+    "dc_c1_05": [
+      "गोपनीयता और विश्वास",
+      "डिजिटल जीवन"
+    ],
+    "dc_c1_06": [
+      "जलवायु बातचीत",
+      "बड़ा विषय"
+    ],
+    "dc_c1_07": [
+      "कला जो छू गई",
+      "सौंदर्य"
+    ],
+    "dc_c1_08": [
+      "बातचीत की कहानी",
+      "सौदा"
+    ],
+    "dc_c1_09": [
+      "मेंटर अनुभव",
+      "विकास"
+    ],
+    "dc_c1_10": [
+      "भाषा और विचार",
+      "भाषाविज्ञान"
+    ],
+    "dc_c1_11": [
+      "जोखिम और पछतावा",
+      "जीवन के चुनाव"
+    ],
+    "dc_c1_12": [
+      "समुदाय बनाना",
+      "सामाजिक ताना"
+    ],
+    "dc_c2_01": [
+      "कॉफ़ी पर दर्शन",
+      "बड़े सवाल"
+    ],
+    "dc_c2_02": [
+      "मीडिया में अलंकार",
+      "प्रवचन"
+    ],
+    "dc_c2_03": [
+      "शक्ति और नैतिकता",
+      "संस्थाएँ"
+    ],
+    "dc_c2_04": [
+      "रचनात्मकता और AI",
+      "भविष्य का हुनर"
+    ],
+    "dc_c2_05": [
+      "वैश्विक अंग्रेज़ी",
+      "विश्व भाषा"
+    ],
+    "dc_c2_06": [
+      "स्मृति और कथा",
+      "कथा"
+    ],
+    "dc_c2_07": [
+      "अर्थव्यवस्था और जीवन",
+      "मैक्रो–माइक्रो"
+    ],
+    "dc_c2_08": [
+      "न्याय की बहस",
+      "नैतिक प्रणाली"
+    ],
+    "dc_c2_09": [
+      "विज्ञान और समाज",
+      "सार्वजनिक समझ"
+    ],
+    "dc_c2_10": [
+      "इम्प्रो मास्टरक्लास",
+      "बिना तैयारी"
+    ],
+    "dc_c2_11": [
+      "शैली का खेल",
+      "शैली बदलना"
+    ],
+    "dc_c2_12": [
+      "खुला लाउंज",
+      "मुक्त बातचीत"
+    ]
+  },
+  "ru": {
+    "dc_a1_01": [
+      "Утреннее приветствие",
+      "Начало дня"
+    ],
+    "dc_a1_02": [
+      "Как прошёл день?",
+      "Ежедневный чек-ин"
+    ],
+    "dc_a1_03": [
+      "Обеденный разговор",
+      "Обеденный перерыв"
+    ],
+    "dc_a1_04": [
+      "Любимый напиток",
+      "Разговор в кафе"
+    ],
+    "dc_a1_05": [
+      "Прямо сейчас",
+      "Настоящий момент"
+    ],
+    "dc_a1_06": [
+      "Планы на выходные",
+      "Простое будущее"
+    ],
+    "dc_a1_07": [
+      "Спасибо и до свидания",
+      "Вежливое завершение"
+    ],
+    "dc_a1_08": [
+      "Разговор о погоде",
+      "Светская беседа"
+    ],
+    "dc_a2_01": [
+      "Как дела?",
+      "Новости друга"
+    ],
+    "dc_a2_02": [
+      "После работы",
+      "Вечерний отдых"
+    ],
+    "dc_a2_03": [
+      "История покупок",
+      "Бытовые дела"
+    ],
+    "dc_a2_04": [
+      "Ужин сегодня",
+      "Кухонный разговор"
+    ],
+    "dc_a2_05": [
+      "Воспоминание о поездке",
+      "Прошлое путешествие"
+    ],
+    "dc_a2_06": [
+      "Музыка и настроение",
+      "Плейлист"
+    ],
+    "dc_a2_07": [
+      "Разговор с соседями",
+      "Местная жизнь"
+    ],
+    "dc_a2_08": [
+      "Привычки с телефоном",
+      "Повседневные технологии"
+    ],
+    "dc_b1_01": [
+      "Дебаты на кофе-брейке",
+      "Лёгкие мнения"
+    ],
+    "dc_b1_02": [
+      "Баланс работы и жизни",
+      "Напряжённая неделя"
+    ],
+    "dc_b1_03": [
+      "Социальные планы",
+      "Планирование"
+    ],
+    "dc_b1_04": [
+      "Изучение английского",
+      "Мотивация"
+    ],
+    "dc_b1_05": [
+      "Здоровые привычки",
+      "Благополучие"
+    ],
+    "dc_b1_06": [
+      "Киновечер",
+      "Рекомендации"
+    ],
+    "dc_b1_07": [
+      "Городская жизнь",
+      "Городской разговор"
+    ],
+    "dc_b1_08": [
+      "Стресс и спокойствие",
+      "Чувства"
+    ],
+    "dc_b1_09": [
+      "Путешествие мечты",
+      "Разговор о будущем"
+    ],
+    "dc_b1_10": [
+      "Новости дня",
+      "Текущие события"
+    ],
+    "dc_b2_01": [
+      "Удалёнка или офис",
+      "Рабочая культура"
+    ],
+    "dc_b2_02": [
+      "Отношения",
+      "Личная жизнь"
+    ],
+    "dc_b2_03": [
+      "Отношение к деньгам",
+      "Финансовый разговор"
+    ],
+    "dc_b2_04": [
+      "Культура и обычаи",
+      "Межкультурное"
+    ],
+    "dc_b2_05": [
+      "Смена карьеры",
+      "Профессиональный путь"
+    ],
+    "dc_b2_06": [
+      "Подкасты и книги",
+      "Медиадиета"
+    ],
+    "dc_b2_07": [
+      "Этические выборы",
+      "Ценности"
+    ],
+    "dc_b2_08": [
+      "Наставничество",
+      "Руководство"
+    ],
+    "dc_b2_09": [
+      "Творческий тупик",
+      "Продуктивность"
+    ],
+    "dc_b2_10": [
+      "Будущее ИИ",
+      "Технообщество"
+    ],
+    "dc_c1_01": [
+      "Идентичность и принадлежность",
+      "Глубоко личное"
+    ],
+    "dc_c1_02": [
+      "Убеждение в жизни",
+      "Влияние"
+    ],
+    "dc_c1_03": [
+      "Юмор между культурами",
+      "Комические нюансы"
+    ],
+    "dc_c1_04": [
+      "Моменты лидерства",
+      "Влияние"
+    ],
+    "dc_c1_05": [
+      "Приватность и доверие",
+      "Цифровая жизнь"
+    ],
+    "dc_c1_06": [
+      "Разговоры о климате",
+      "Большая тема"
+    ],
+    "dc_c1_07": [
+      "Искусство, что тронуло",
+      "Эстетика"
+    ],
+    "dc_c1_08": [
+      "История переговоров",
+      "Сделка"
+    ],
+    "dc_c1_09": [
+      "Опыт наставника",
+      "Рост"
+    ],
+    "dc_c1_10": [
+      "Язык и мышление",
+      "Лингвистика"
+    ],
+    "dc_c1_11": [
+      "Риск и сожаление",
+      "Жизненные выборы"
+    ],
+    "dc_c1_12": [
+      "Создание сообщества",
+      "Социальная ткань"
+    ],
+    "dc_c2_01": [
+      "Философия за кофе",
+      "Большие вопросы"
+    ],
+    "dc_c2_02": [
+      "Риторика в медиа",
+      "Дискурс"
+    ],
+    "dc_c2_03": [
+      "Власть и этика",
+      "Институты"
+    ],
+    "dc_c2_04": [
+      "Творчество и ИИ",
+      "Ремесло будущего"
+    ],
+    "dc_c2_05": [
+      "Глобальный английский",
+      "Мировой язык"
+    ],
+    "dc_c2_06": [
+      "Память и история",
+      "Повествование"
+    ],
+    "dc_c2_07": [
+      "Экономика и жизнь",
+      "Макро–микро"
+    ],
+    "dc_c2_08": [
+      "Дебаты о справедливости",
+      "Моральные системы"
+    ],
+    "dc_c2_09": [
+      "Наука и общество",
+      "Общественное понимание"
+    ],
+    "dc_c2_10": [
+      "Мастер-класс импровизации",
+      "Без подготовки"
+    ],
+    "dc_c2_11": [
+      "Игра регистров",
+      "Смена стиля"
+    ],
+    "dc_c2_12": [
+      "Открытая гостиная",
+      "Свободный чат"
+    ]
+  }
+}

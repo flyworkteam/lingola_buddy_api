@@ -1,0 +1,36 @@
+{
+  "name": "lingola_apis",
+  "version": "1.0.0",
+  "description": "Lingola Buddy — yalnızca auth API",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon --config nodemon.json app.js",
+    "generate-secret": "node scripts/generate-secret.js",
+    "migrate:lessons": "node scripts/migrate_lessons.js",
+    "migrate:streak": "node scripts/migrate_streak.js",
+    "migrate:progress": "node scripts/migrate_progress_stats.js",
+    "migrate:conversations": "node scripts/migrate_conversations.js",
+    "seed:lessons": "node scripts/seed_lessons.js",
+    "migrate:daily-conversations": "node scripts/migrate_daily_conversations.js",
+    "seed:daily-conversations": "node scripts/seed_daily_conversations.js",
+    "migrate:tutor-translations": "node scripts/migrate_tutor_translations.js",
+    "gen:tutor-locale-packs": "node scripts/gen_tutor_locale_packs.js",
+    "backfill:tutor-translations-tr": "node scripts/backfill_tutor_translations_tr.js",
+    "backfill:tutor-translations-all": "node scripts/gen_tutor_locale_packs.js && node scripts/backfill_tutor_translations_all.js"
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "dotenv": "^16.3.1",
+    "express": "^5.2.1",
+    "firebase-admin": "^13.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^3.6.5",
+    "openai": "^6.39.1",
+    "ws": "^8.21.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}

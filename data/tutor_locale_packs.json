@@ -1,0 +1,994 @@
+{
+  "annie": {
+    "en": {
+      "displayName": "Annie",
+      "tagline": "Speaking confidence",
+      "description": "Provides a supportive space to build speaking confidence without fear of making mistakes."
+    },
+    "tr": {
+      "displayName": "Annie",
+      "tagline": "Konuşma güveni",
+      "description": "Hata yapmaktan çekinmeden konuşma özgüvenini artırmak için destekleyici bir ortam sağlar."
+    },
+    "de": {
+      "displayName": "Annie",
+      "tagline": "Sprechvertrauen",
+      "description": "Schafft einen unterstützenden Raum, um Sprechvertrauen ohne Angst vor Fehlern aufzubauen."
+    },
+    "fr": {
+      "displayName": "Annie",
+      "tagline": "Confiance à l'oral",
+      "description": "Offre un cadre bienveillant pour gagner en confiance à l'oral sans craindre les erreurs."
+    },
+    "it": {
+      "displayName": "Annie",
+      "tagline": "Fiducia nel parlare",
+      "description": "Offre un ambiente di supporto per aumentare la fiducia nel parlare senza paura degli errori."
+    },
+    "es": {
+      "displayName": "Annie",
+      "tagline": "Confianza al hablar",
+      "description": "Ofrece un espacio de apoyo para ganar confianza al hablar sin miedo a equivocarse."
+    },
+    "ja": {
+      "displayName": "Annie",
+      "tagline": "話す自信",
+      "description": "間違いを恐れずに話す自信を育てる、支えになる練習環境を提供します。"
+    },
+    "ru": {
+      "displayName": "Annie",
+      "tagline": "Уверенность в речи",
+      "description": "Создаёт поддерживающую среду, чтобы говорить уверенно, не боясь ошибок."
+    },
+    "ko": {
+      "displayName": "Annie",
+      "tagline": "말하기 자신감",
+      "description": "실수를 두려워하지 않고 말하기 자신감을 키울 수 있는 지원 환경을 제공합니다."
+    },
+    "hi": {
+      "displayName": "Annie",
+      "tagline": "बोलने का आत्मविश्वास",
+      "description": "गलतियों से डरे बिना बोलने का आत्मविश्वास बढ़ाने के लिए सहायक माहौल प्रदान करता है।"
+    },
+    "pt": {
+      "displayName": "Annie",
+      "tagline": "Confiança ao falar",
+      "description": "Oferece um ambiente de apoio para ganhar confiança ao falar sem medo de errar."
+    },
+    "zh": {
+      "displayName": "Annie",
+      "tagline": "口语自信",
+      "description": "提供支持性环境，让你在不怕犯错的情况下建立口语自信。"
+    }
+  },
+  "clara": {
+    "en": {
+      "displayName": "Clara",
+      "tagline": "Daily dialogue",
+      "description": "Makes conversation easier with practical phrases for cafés, shopping, and travel."
+    },
+    "tr": {
+      "displayName": "Clara",
+      "tagline": "Günlük diyalog",
+      "description": "Kafede, alışverişte ve seyahatte kullanacağın pratik ifadelerle konuşmayı kolaylaştırır."
+    },
+    "de": {
+      "displayName": "Clara",
+      "tagline": "Alltagsdialog",
+      "description": "Erleichtert Gespräche mit praktischen Ausdrücken für Café, Einkauf und Reisen."
+    },
+    "fr": {
+      "displayName": "Clara",
+      "tagline": "Dialogue du quotidien",
+      "description": "Facilite la conversation avec des expressions pratiques pour le café, les courses et les voyages."
+    },
+    "it": {
+      "displayName": "Clara",
+      "tagline": "Dialogo quotidiano",
+      "description": "Rende più facile conversare con frasi pratiche per bar, shopping e viaggi."
+    },
+    "es": {
+      "displayName": "Clara",
+      "tagline": "Diálogo diario",
+      "description": "Facilita la conversación con frases prácticas para cafés, compras y viajes."
+    },
+    "ja": {
+      "displayName": "Clara",
+      "tagline": "日常会話",
+      "description": "カフェ、買い物、旅行で使える実用的な表現で会話を楽にします。"
+    },
+    "ru": {
+      "displayName": "Clara",
+      "tagline": "Бытовой диалог",
+      "description": "Облегчает разговор практичными фразами для кафе, покупок и путешествий."
+    },
+    "ko": {
+      "displayName": "Clara",
+      "tagline": "일상 대화",
+      "description": "카페, 쇼핑, 여행에 쓰는 실용 표현으로 대화를 쉽게 만듭니다."
+    },
+    "hi": {
+      "displayName": "Clara",
+      "tagline": "दैनिक संवाद",
+      "description": "कैफ़े, खरीदारी और यात्रा के लिए व्यावहारिक वाक्यों से बातचीत आसान बनाता है।"
+    },
+    "pt": {
+      "displayName": "Clara",
+      "tagline": "Diálogo diário",
+      "description": "Facilita a conversa com frases práticas para café, compras e viagens."
+    },
+    "zh": {
+      "displayName": "Clara",
+      "tagline": "日常对话",
+      "description": "用咖啡馆、购物和旅行中的实用表达让对话更轻松。"
+    }
+  },
+  "frank": {
+    "en": {
+      "displayName": "Frank",
+      "tagline": "Listening",
+      "description": "Offers listening practice with varied accents and note-taking strategies."
+    },
+    "tr": {
+      "displayName": "Frank",
+      "tagline": "Dinleme",
+      "description": "Farklı aksanlardan metinlerle dinleme pratiği ve not alma stratejileri sunar."
+    },
+    "de": {
+      "displayName": "Frank",
+      "tagline": "Hörverständnis",
+      "description": "Bietet Hörübungen mit verschiedenen Akzenten und Strategien zum Mitschreiben."
+    },
+    "fr": {
+      "displayName": "Frank",
+      "tagline": "Écoute",
+      "description": "Propose des exercices d'écoute avec différents accents et des stratégies de prise de notes."
+    },
+    "it": {
+      "displayName": "Frank",
+      "tagline": "Ascolto",
+      "description": "Offre pratica d'ascolto con accenti diversi e strategie per prendere appunti."
+    },
+    "es": {
+      "displayName": "Frank",
+      "tagline": "Escucha",
+      "description": "Ofrece práctica de escucha con distintos acentos y estrategias para tomar notas."
+    },
+    "ja": {
+      "displayName": "Frank",
+      "tagline": "リスニング",
+      "description": "さまざまなアクセントの教材とメモの取り方でリスニング練習を提供します。"
+    },
+    "ru": {
+      "displayName": "Frank",
+      "tagline": "Аудирование",
+      "description": "Предлагает практику слушания с разными акцентами и стратегиями конспектирования."
+    },
+    "ko": {
+      "displayName": "Frank",
+      "tagline": "듣기",
+      "description": "다양한 억양의 자료와 메모 전략으로 듣기 연습을 제공합니다."
+    },
+    "hi": {
+      "displayName": "Frank",
+      "tagline": "सुनना",
+      "description": "विभिन्न उच्चारणों और नोट लेने की रणनीतियों के साथ सुनने का अभ्यास देता है।"
+    },
+    "pt": {
+      "displayName": "Frank",
+      "tagline": "Escuta",
+      "description": "Oferece prática de escuta com sotaques variados e estratégias de anotação."
+    },
+    "zh": {
+      "displayName": "Frank",
+      "tagline": "听力",
+      "description": "通过不同口音的材料和笔记策略提供听力练习。"
+    }
+  },
+  "james": {
+    "en": {
+      "displayName": "James",
+      "tagline": "Pronunciation & rhythm",
+      "description": "A patient practice partner focused on natural pronunciation and fluent sentences."
+    },
+    "tr": {
+      "displayName": "James",
+      "tagline": "Telaffuz & ritim",
+      "description": "Doğal telaffuz ve akıcı cümle kurma üzerine odaklanan, sabırlı bir pratik partneri."
+    },
+    "de": {
+      "displayName": "James",
+      "tagline": "Aussprache & Rhythmus",
+      "description": "Ein geduldiger Partner für natürliche Aussprache und flüssige Sätze."
+    },
+    "fr": {
+      "displayName": "James",
+      "tagline": "Prononciation & rythme",
+      "description": "Un partenaire patient axé sur une prononciation naturelle et des phrases fluides."
+    },
+    "it": {
+      "displayName": "James",
+      "tagline": "Pronuncia e ritmo",
+      "description": "Un partner paziente focalizzato su pronuncia naturale e frasi fluide."
+    },
+    "es": {
+      "displayName": "James",
+      "tagline": "Pronunciación y ritmo",
+      "description": "Un compañero paciente centrado en la pronunciación natural y frases fluidas."
+    },
+    "ja": {
+      "displayName": "James",
+      "tagline": "発音とリズム",
+      "description": "自然な発音と流暢な文作りに焦点を当てた、忍耐強い練習パートナーです。"
+    },
+    "ru": {
+      "displayName": "James",
+      "tagline": "Произношение и ритм",
+      "description": "Терпеливый партнёр, сосредоточенный на естественном произношении и плавных фразах."
+    },
+    "ko": {
+      "displayName": "James",
+      "tagline": "발음과 리듬",
+      "description": "자연스러운 발음과 유창한 문장에 집중하는 인내심 있는 연습 파트너입니다."
+    },
+    "hi": {
+      "displayName": "James",
+      "tagline": "उच्चारण और लय",
+      "description": "प्राकृतिक उच्चारण और धाराप्रवाह वाक्यों पर केंद्रित धैर्यवान अभ्यास साथी।"
+    },
+    "pt": {
+      "displayName": "James",
+      "tagline": "Pronúncia e ritmo",
+      "description": "Um parceiro paciente focado em pronúncia natural e frases fluentes."
+    },
+    "zh": {
+      "displayName": "James",
+      "tagline": "发音与节奏",
+      "description": "专注自然发音和流利句子的耐心练习伙伴。"
+    }
+  },
+  "jhon": {
+    "en": {
+      "displayName": "Jhon",
+      "tagline": "Pronunciation",
+      "description": "Helps you speak clearly by working through difficult sounds step by step."
+    },
+    "tr": {
+      "displayName": "Jhon",
+      "tagline": "Telaffuz",
+      "description": "Zor sesleri adım adım çalışarak net ve anlaşılır konuşmana yardımcı olur."
+    },
+    "de": {
+      "displayName": "Jhon",
+      "tagline": "Aussprache",
+      "description": "Hilft dir, klar zu sprechen, indem schwierige Laute Schritt für Schritt geübt werden."
+    },
+    "fr": {
+      "displayName": "Jhon",
+      "tagline": "Prononciation",
+      "description": "Vous aide à parler clairement en travaillant les sons difficiles pas à pas."
+    },
+    "it": {
+      "displayName": "Jhon",
+      "tagline": "Pronuncia",
+      "description": "Ti aiuta a parlare chiaramente lavorando sui suoni difficili passo dopo passo."
+    },
+    "es": {
+      "displayName": "Jhon",
+      "tagline": "Pronunciación",
+      "description": "Te ayuda a hablar con claridad trabajando los sonidos difíciles paso a paso."
+    },
+    "ja": {
+      "displayName": "Jhon",
+      "tagline": "発音",
+      "description": "難しい音を段階的に練習し、はっきり伝わる話し方をサポートします。"
+    },
+    "ru": {
+      "displayName": "Jhon",
+      "tagline": "Произношение",
+      "description": "Помогает говорить чётко, отрабатывая сложные звуки шаг за шагом."
+    },
+    "ko": {
+      "displayName": "Jhon",
+      "tagline": "발음",
+      "description": "어려운 소리를 단계별로 연습해 또렷하게 말하도록 돕습니다."
+    },
+    "hi": {
+      "displayName": "Jhon",
+      "tagline": "उच्चारण",
+      "description": "कठिन ध्वनियों को क्रम से अभ्यास कर स्पष्ट बोलने में मदद करता है।"
+    },
+    "pt": {
+      "displayName": "Jhon",
+      "tagline": "Pronúncia",
+      "description": "Ajuda você a falar com clareza trabalhando sons difíceis passo a passo."
+    },
+    "zh": {
+      "displayName": "Jhon",
+      "tagline": "发音",
+      "description": "逐步练习难音，帮助你清晰表达。"
+    }
+  },
+  "lee": {
+    "en": {
+      "displayName": "Lee",
+      "tagline": "Grammar",
+      "description": "Reinforces rules through conversation so you can build natural, correct sentences."
+    },
+    "tr": {
+      "displayName": "Lee",
+      "tagline": "Dil bilgisi",
+      "description": "Kuralları konuşma içinde pekiştirerek doğal ve doğru cümle kurmana yardımcı olur."
+    },
+    "de": {
+      "displayName": "Lee",
+      "tagline": "Grammatik",
+      "description": "Festigt Regeln im Gespräch, damit du natürliche und korrekte Sätze bildest."
+    },
+    "fr": {
+      "displayName": "Lee",
+      "tagline": "Grammaire",
+      "description": "Renforce les règles dans la conversation pour construire des phrases naturelles et correctes."
+    },
+    "it": {
+      "displayName": "Lee",
+      "tagline": "Grammatica",
+      "description": "Consolida le regole nella conversazione per costruire frasi naturali e corrette."
+    },
+    "es": {
+      "displayName": "Lee",
+      "tagline": "Gramática",
+      "description": "Refuerza las reglas en la conversación para construir frases naturales y correctas."
+    },
+    "ja": {
+      "displayName": "Lee",
+      "tagline": "文法",
+      "description": "会話の中で文法を定着させ、自然で正確な文を作れるよう助けます。"
+    },
+    "ru": {
+      "displayName": "Lee",
+      "tagline": "Грамматика",
+      "description": "Закрепляет правила в разговоре, чтобы строить естественные и правильные предложения."
+    },
+    "ko": {
+      "displayName": "Lee",
+      "tagline": "문법",
+      "description": "대화 속에서 문법을 다져 자연스럽고 정확한 문장을 만들도록 돕습니다."
+    },
+    "hi": {
+      "displayName": "Lee",
+      "tagline": "व्याकरण",
+      "description": "बातचीत में नियमों को मजबूत कर प्राकृतिक और सही वाक्य बनाने में सहायता करता है।"
+    },
+    "pt": {
+      "displayName": "Lee",
+      "tagline": "Gramática",
+      "description": "Reforça regras na conversa para construir frases naturais e corretas."
+    },
+    "zh": {
+      "displayName": "Lee",
+      "tagline": "语法",
+      "description": "在对话中巩固语法规则，帮助你构建自然正确的句子。"
+    }
+  },
+  "lin": {
+    "en": {
+      "displayName": "Lin",
+      "tagline": "Vocabulary",
+      "description": "Expands your word bank by teaching new words in real conversational context."
+    },
+    "tr": {
+      "displayName": "Lin",
+      "tagline": "Kelime haznesi",
+      "description": "Bağlam içinde yeni kelimeler öğrenerek kelime dağarcığını genişletmene yardım eder."
+    },
+    "de": {
+      "displayName": "Lin",
+      "tagline": "Wortschatz",
+      "description": "Erweitert deinen Wortschatz, indem neue Wörter im Gesprächskontext gelernt werden."
+    },
+    "fr": {
+      "displayName": "Lin",
+      "tagline": "Vocabulaire",
+      "description": "Élargit votre vocabulaire en apprenant de nouveaux mots dans un contexte conversationnel."
+    },
+    "it": {
+      "displayName": "Lin",
+      "tagline": "Vocabolario",
+      "description": "Espande il vocabolario insegnando nuove parole nel contesto della conversazione."
+    },
+    "es": {
+      "displayName": "Lin",
+      "tagline": "Vocabulario",
+      "description": "Amplía tu vocabulario enseñando palabras nuevas en contexto conversacional."
+    },
+    "ja": {
+      "displayName": "Lin",
+      "tagline": "語彙",
+      "description": "会話の文脈の中で新しい単語を学び、語彙力を広げます。"
+    },
+    "ru": {
+      "displayName": "Lin",
+      "tagline": "Словарный запас",
+      "description": "Расширяет словарь, обучая новым словам в контексте живого общения."
+    },
+    "ko": {
+      "displayName": "Lin",
+      "tagline": "어휘",
+      "description": "대화 맥락에서 새 단어를 배워 어휘력을 넓힙니다."
+    },
+    "hi": {
+      "displayName": "Lin",
+      "tagline": "शब्द भंडार",
+      "description": "संवाद के संदर्भ में नए शब्द सिखाकर शब्द भंडार बढ़ाता है।"
+    },
+    "pt": {
+      "displayName": "Lin",
+      "tagline": "Vocabulário",
+      "description": "Expande o vocabulário ensinando palavras novas no contexto da conversa."
+    },
+    "zh": {
+      "displayName": "Lin",
+      "tagline": "词汇",
+      "description": "在对话语境中学习新词，扩展词汇量。"
+    }
+  },
+  "nina": {
+    "en": {
+      "displayName": "Nina",
+      "tagline": "Quick practice",
+      "description": "Ideal for fast-paced progress with short sessions, repetition, and feedback."
+    },
+    "tr": {
+      "displayName": "Nina",
+      "tagline": "Hızlı pratik",
+      "description": "Kısa seanslarla yoğun tempoda tekrar ve geri bildirimle ilerlemen için idealdir."
+    },
+    "de": {
+      "displayName": "Nina",
+      "tagline": "Schnelles Training",
+      "description": "Ideal für schnellen Fortschritt mit kurzen Einheiten, Wiederholung und Feedback."
+    },
+    "fr": {
+      "displayName": "Nina",
+      "tagline": "Pratique rapide",
+      "description": "Idéal pour progresser vite avec des sessions courtes, de la répétition et des retours."
+    },
+    "it": {
+      "displayName": "Nina",
+      "tagline": "Pratica rapida",
+      "description": "Ideale per progressi veloci con sessioni brevi, ripetizione e feedback."
+    },
+    "es": {
+      "displayName": "Nina",
+      "tagline": "Práctica rápida",
+      "description": "Ideal para avanzar rápido con sesiones cortas, repetición y retroalimentación."
+    },
+    "ja": {
+      "displayName": "Nina",
+      "tagline": "クイック練習",
+      "description": "短いセッションと反復、フィードバックで素早く上達したい人に最適です。"
+    },
+    "ru": {
+      "displayName": "Nina",
+      "tagline": "Быстрая практика",
+      "description": "Идеально для быстрого прогресса: короткие сессии, повторение и обратная связь."
+    },
+    "ko": {
+      "displayName": "Nina",
+      "tagline": "빠른 연습",
+      "description": "짧은 세션, 반복, 피드백으로 빠르게 성장하기에 이상적입니다."
+    },
+    "hi": {
+      "displayName": "Nina",
+      "tagline": "त्वरित अभ्यास",
+      "description": "छोटे सत्र, दोहराव और फीडबैक के साथ तेज़ प्रगति के लिए आदर्श।"
+    },
+    "pt": {
+      "displayName": "Nina",
+      "tagline": "Prática rápida",
+      "description": "Ideal para progresso rápido com sessões curtas, repetição e feedback."
+    },
+    "zh": {
+      "displayName": "Nina",
+      "tagline": "快速练习",
+      "description": "适合通过短课时、重复和反馈快速进步。"
+    }
+  },
+  "seraphine": {
+    "en": {
+      "displayName": "Seraphine",
+      "tagline": "Fluency",
+      "description": "Focuses on speaking without hesitation and expressing your thoughts smoothly."
+    },
+    "tr": {
+      "displayName": "Seraphine",
+      "tagline": "Akıcılık",
+      "description": "Duraksamadan konuşma ve düşünceyi ifade etme becerini geliştirmene odaklanır."
+    },
+    "de": {
+      "displayName": "Seraphine",
+      "tagline": "Flüssigkeit",
+      "description": "Konzentriert sich darauf, ohne Zögern zu sprechen und Gedanken flüssig auszudrücken."
+    },
+    "fr": {
+      "displayName": "Seraphine",
+      "tagline": "Fluidité",
+      "description": "Se concentre sur l'expression fluide des idées sans hésitation."
+    },
+    "it": {
+      "displayName": "Seraphine",
+      "tagline": "Fluidità",
+      "description": "Si concentra sul parlare senza esitazione e sull'espressione fluida dei pensieri."
+    },
+    "es": {
+      "displayName": "Seraphine",
+      "tagline": "Fluidez",
+      "description": "Se centra en hablar sin dudar y expresar tus ideas con fluidez."
+    },
+    "ja": {
+      "displayName": "Seraphine",
+      "tagline": "流暢さ",
+      "description": "ためらわずに話し、考えをスムーズに伝える力に焦点を当てます。"
+    },
+    "ru": {
+      "displayName": "Seraphine",
+      "tagline": "Беглость",
+      "description": "Фокус на речи без пауз и плавном выражении мыслей."
+    },
+    "ko": {
+      "displayName": "Seraphine",
+      "tagline": "유창성",
+      "description": "망설임 없이 말하고 생각을 매끄럽게 표현하는 데 집중합니다."
+    },
+    "hi": {
+      "displayName": "Seraphine",
+      "tagline": "धाराप्रवाहता",
+      "description": "हिचकिचाहट के बिना बोलने और विचारों को सहजता से व्यक्त करने पर ध्यान देता है।"
+    },
+    "pt": {
+      "displayName": "Seraphine",
+      "tagline": "Fluência",
+      "description": "Foca em falar sem hesitar e expressar pensamentos com fluidez."
+    },
+    "zh": {
+      "displayName": "Seraphine",
+      "tagline": "流利度",
+      "description": "专注于不假思索地说话并流畅表达想法。"
+    }
+  },
+  "sophie": {
+    "en": {
+      "displayName": "Sophie",
+      "tagline": "Cultural journey",
+      "description": "Sophie turns every lesson into a cultural journey, teaching English from around the world each season."
+    },
+    "tr": {
+      "displayName": "Sophie",
+      "tagline": "Kültürel yolculuk",
+      "description": "Her mevsim dünyanın farklı bir köşesinden İngilizce öğreten Sophie, her dersi kültürel bir yolculuğa dönüştürür."
+    },
+    "de": {
+      "displayName": "Sophie",
+      "tagline": "Kulturelle Reise",
+      "description": "Sophie verwandelt jede Lektion in eine kulturelle Reise und bringt dir Englisch aus aller Welt bei."
+    },
+    "fr": {
+      "displayName": "Sophie",
+      "tagline": "Voyage culturel",
+      "description": "Sophie transforme chaque leçon en voyage culturel, enseignant l'anglais du monde entier chaque saison."
+    },
+    "it": {
+      "displayName": "Sophie",
+      "tagline": "Viaggio culturale",
+      "description": "Sophie trasforma ogni lezione in un viaggio culturale, insegnando inglese da tutto il mondo ogni stagione."
+    },
+    "es": {
+      "displayName": "Sophie",
+      "tagline": "Viaje cultural",
+      "description": "Sophie convierte cada lección en un viaje cultural, enseñando inglés de todo el mundo cada temporada."
+    },
+    "ja": {
+      "displayName": "Sophie",
+      "tagline": "文化の旅",
+      "description": "ソフィーは毎シーズン世界各地から英語を教え、レッスンを文化の旅に変えます。"
+    },
+    "ru": {
+      "displayName": "Sophie",
+      "tagline": "Культурное путешествие",
+      "description": "Софи превращает каждый урок в культурное путешествие, обучая английскому со всего мира."
+    },
+    "ko": {
+      "displayName": "Sophie",
+      "tagline": "문화 여행",
+      "description": "소피는 매 시즌 세계 각지의 영어를 가르치며 수업을 문화 여행으로 바꿉니다."
+    },
+    "hi": {
+      "displayName": "Sophie",
+      "tagline": "सांस्कृतिक यात्रा",
+      "description": "सोफी हर सीज़न दुनिया भर से अंग्रेज़ी सिखाकर हर पाठ को सांस्कृतिक यात्रा बनाती है।"
+    },
+    "pt": {
+      "displayName": "Sophie",
+      "tagline": "Jornada cultural",
+      "description": "Sophie transforma cada lição em uma jornada cultural, ensinando inglês do mundo todo a cada temporada."
+    },
+    "zh": {
+      "displayName": "Sophie",
+      "tagline": "文化之旅",
+      "description": "Sophie 每个季节教授来自世界各地的英语，把每节课变成文化之旅。"
+    }
+  },
+  "aria": {
+    "en": {
+      "displayName": "Aria",
+      "tagline": "Daily chat",
+      "description": "A warm, supportive space to express yourself comfortably in everyday conversations."
+    },
+    "tr": {
+      "displayName": "Aria",
+      "tagline": "Günlük sohbet",
+      "description": "Günlük sohbetlerde kendini rahat ifade etmen için sıcak ve destekleyici bir pratik ortamı sunar."
+    },
+    "de": {
+      "displayName": "Aria",
+      "tagline": "Tägliches Gespräch",
+      "description": "Ein warmer, unterstützender Raum, um dich im Alltagsgespräch wohlzufühlen."
+    },
+    "fr": {
+      "displayName": "Aria",
+      "tagline": "Discussion quotidienne",
+      "description": "Un espace chaleureux et bienveillant pour vous exprimer aisément au quotidien."
+    },
+    "it": {
+      "displayName": "Aria",
+      "tagline": "Chat quotidiana",
+      "description": "Uno spazio caldo e di supporto per esprimerti comodamente nelle conversazioni di tutti i giorni."
+    },
+    "es": {
+      "displayName": "Aria",
+      "tagline": "Charla diaria",
+      "description": "Un espacio cálido y de apoyo para expresarte con comodidad en conversaciones cotidianas."
+    },
+    "ja": {
+      "displayName": "Aria",
+      "tagline": "日常チャット",
+      "description": "日常会話で自分らしく話せる、温かく支えになる練習空間です。"
+    },
+    "ru": {
+      "displayName": "Aria",
+      "tagline": "Ежедневный чат",
+      "description": "Тёплая поддерживающая среда, чтобы свободно выражаться в повседневных беседах."
+    },
+    "ko": {
+      "displayName": "Aria",
+      "tagline": "일상 채팅",
+      "description": "일상 대화에서 편안하게 자신을 표현할 수 있는 따뜻한 연습 공간입니다."
+    },
+    "hi": {
+      "displayName": "Aria",
+      "tagline": "दैनिक चैट",
+      "description": "रोज़मर्रा की बातचीत में आराम से खुद को व्यक्त करने के लिए गर्मजोशी भरा अभ्यास स्थान।"
+    },
+    "pt": {
+      "displayName": "Aria",
+      "tagline": "Chat diário",
+      "description": "Um espaço acolhedor e de apoio para se expressar com conforto no dia a dia."
+    },
+    "zh": {
+      "displayName": "Aria",
+      "tagline": "日常聊天",
+      "description": "温暖支持的环境，让你在日常对话中自在表达。"
+    }
+  },
+  "brian": {
+    "en": {
+      "displayName": "Brian",
+      "tagline": "Listening",
+      "description": "Builds comprehension step by step through listening practice at different accents and speeds."
+    },
+    "tr": {
+      "displayName": "Brian",
+      "tagline": "Dinleme",
+      "description": "Farklı aksan ve hızlarda dinleme pratiğiyle anlama becerini adım adım geliştirir."
+    },
+    "de": {
+      "displayName": "Brian",
+      "tagline": "Hörverständnis",
+      "description": "Verbessert dein Verstehen Schritt für Schritt durch Übungen mit verschiedenen Akzenten und Tempi."
+    },
+    "fr": {
+      "displayName": "Brian",
+      "tagline": "Écoute",
+      "description": "Développe la compréhension pas à pas grâce à l'écoute à différents accents et vitesses."
+    },
+    "it": {
+      "displayName": "Brian",
+      "tagline": "Ascolto",
+      "description": "Sviluppa la comprensione passo dopo passo con pratica d'ascolto a accenti e velocità diverse."
+    },
+    "es": {
+      "displayName": "Brian",
+      "tagline": "Escucha",
+      "description": "Desarrolla la comprensión paso a paso con práctica de escucha en distintos acentos y velocidades."
+    },
+    "ja": {
+      "displayName": "Brian",
+      "tagline": "リスニング",
+      "description": "さまざまなアクセントと速度で、段階的に理解力を高めるリスニング練習を行います。"
+    },
+    "ru": {
+      "displayName": "Brian",
+      "tagline": "Аудирование",
+      "description": "Пошагово развивает понимание через практику слушания с разными акцентами и темпами."
+    },
+    "ko": {
+      "displayName": "Brian",
+      "tagline": "듣기",
+      "description": "다양한 억양과 속도로 단계별 이해력을 키우는 듣기 연습을 합니다."
+    },
+    "hi": {
+      "displayName": "Brian",
+      "tagline": "सुनना",
+      "description": "विभिन्न उच्चारण और गति से क्रमशः समझ विकसित करने वाला सुनने का अभ्यास।"
+    },
+    "pt": {
+      "displayName": "Brian",
+      "tagline": "Escuta",
+      "description": "Desenvolve a compreensão passo a passo com prática de escuta em diferentes sotaques e velocidades."
+    },
+    "zh": {
+      "displayName": "Brian",
+      "tagline": "听力",
+      "description": "通过不同口音和语速的听力练习逐步提升理解力。"
+    }
+  },
+  "elara": {
+    "en": {
+      "displayName": "Elara",
+      "tagline": "Vocabulary",
+      "description": "Helps you grow your vocabulary naturally by learning new words in context."
+    },
+    "tr": {
+      "displayName": "Elara",
+      "tagline": "Kelime haznesi",
+      "description": "Bağlam içinde yeni kelimeler öğreterek kelime dağarcığını doğal şekilde genişletmene yardım eder."
+    },
+    "de": {
+      "displayName": "Elara",
+      "tagline": "Wortschatz",
+      "description": "Hilft dir, deinen Wortschatz natürlich zu erweitern, indem neue Wörter im Kontext gelernt werden."
+    },
+    "fr": {
+      "displayName": "Elara",
+      "tagline": "Vocabulaire",
+      "description": "Aide à enrichir naturellement le vocabulaire en apprenant de nouveaux mots en contexte."
+    },
+    "it": {
+      "displayName": "Elara",
+      "tagline": "Vocabolario",
+      "description": "Aiuta ad ampliare il vocabolario in modo naturale imparando nuove parole nel contesto."
+    },
+    "es": {
+      "displayName": "Elara",
+      "tagline": "Vocabulario",
+      "description": "Ayuda a ampliar el vocabulario de forma natural aprendiendo palabras nuevas en contexto."
+    },
+    "ja": {
+      "displayName": "Elara",
+      "tagline": "語彙",
+      "description": "文脈の中で新しい単語を学び、自然に語彙を広げる手助けをします。"
+    },
+    "ru": {
+      "displayName": "Elara",
+      "tagline": "Словарный запас",
+      "description": "Помогает естественно расширять словарь, изучая новые слова в контексте."
+    },
+    "ko": {
+      "displayName": "Elara",
+      "tagline": "어휘",
+      "description": "맥락 속 새 단어를 배워 자연스럽게 어휘를 늘리도록 돕습니다."
+    },
+    "hi": {
+      "displayName": "Elara",
+      "tagline": "शब्द भंडार",
+      "description": "संदर्भ में नए शब्द सीखकर प्राकृतिक रूप से शब्द भंडार बढ़ाने में मदद करता है।"
+    },
+    "pt": {
+      "displayName": "Elara",
+      "tagline": "Vocabulário",
+      "description": "Ajuda a ampliar o vocabulário naturalmente aprendendo palavras novas em contexto."
+    },
+    "zh": {
+      "displayName": "Elara",
+      "tagline": "词汇",
+      "description": "在语境中学习新词，自然扩展词汇量。"
+    }
+  },
+  "lyra": {
+    "en": {
+      "displayName": "Lyra",
+      "tagline": "Fluency",
+      "description": "Focuses on speaking without pauses and expressing your ideas fluently."
+    },
+    "tr": {
+      "displayName": "Lyra",
+      "tagline": "Akıcılık",
+      "description": "Duraksamadan konuşma ve düşünceni akıcı şekilde ifade etme becerine odaklanır."
+    },
+    "de": {
+      "displayName": "Lyra",
+      "tagline": "Flüssigkeit",
+      "description": "Fokussiert auf flüssiges Sprechen ohne Pausen und klare Ideenäußerung."
+    },
+    "fr": {
+      "displayName": "Lyra",
+      "tagline": "Fluidité",
+      "description": "Se concentre sur une expression fluide sans pauses et des idées claires."
+    },
+    "it": {
+      "displayName": "Lyra",
+      "tagline": "Fluidità",
+      "description": "Si concentra sul parlare senza pause e sull'espressione fluente delle idee."
+    },
+    "es": {
+      "displayName": "Lyra",
+      "tagline": "Fluidez",
+      "description": "Se centra en hablar sin pausas y expresar ideas con fluidez."
+    },
+    "ja": {
+      "displayName": "Lyra",
+      "tagline": "流暢さ",
+      "description": "間を置かずに話し、アイデアを流暢に伝える力に焦点を当てます。"
+    },
+    "ru": {
+      "displayName": "Lyra",
+      "tagline": "Беглость",
+      "description": "Сосредоточена на речи без пауз и плавном выражении идей."
+    },
+    "ko": {
+      "displayName": "Lyra",
+      "tagline": "유창성",
+      "description": "쉬지 않고 말하고 아이디어를 유창하게 표현하는 데 집중합니다."
+    },
+    "hi": {
+      "displayName": "Lyra",
+      "tagline": "धाराप्रवाहता",
+      "description": "रुके बिना बोलने और विचारों को धाराप्रवाह व्यक्त करने पर केंद्रित।"
+    },
+    "pt": {
+      "displayName": "Lyra",
+      "tagline": "Fluência",
+      "description": "Foca em falar sem pausas e expressar ideias com fluidez."
+    },
+    "zh": {
+      "displayName": "Lyra",
+      "tagline": "流利度",
+      "description": "专注于不停顿地说话并流畅表达观点。"
+    }
+  },
+  "max": {
+    "en": {
+      "displayName": "Max",
+      "tagline": "Pronunciation & rhythm",
+      "description": "A patient partner focused on natural pronunciation and sentence rhythm."
+    },
+    "tr": {
+      "displayName": "Max",
+      "tagline": "Telaffuz & ritim",
+      "description": "Doğal telaffuz ve cümle ritmi üzerine odaklanan sabırlı bir pratik partneridir."
+    },
+    "de": {
+      "displayName": "Max",
+      "tagline": "Aussprache & Rhythmus",
+      "description": "Ein geduldiger Partner für natürliche Aussprache und Satzrhythmus."
+    },
+    "fr": {
+      "displayName": "Max",
+      "tagline": "Prononciation & rythme",
+      "description": "Un partenaire patient axé sur la prononciation naturelle et le rythme des phrases."
+    },
+    "it": {
+      "displayName": "Max",
+      "tagline": "Pronuncia e ritmo",
+      "description": "Un partner paziente focalizzato su pronuncia naturale e ritmo delle frasi."
+    },
+    "es": {
+      "displayName": "Max",
+      "tagline": "Pronunciación y ritmo",
+      "description": "Un compañero paciente centrado en la pronunciación natural y el ritmo de las frases."
+    },
+    "ja": {
+      "displayName": "Max",
+      "tagline": "発音とリズム",
+      "description": "自然な発音と文のリズムに焦点を当てた、忍耐強い練習パートナーです。"
+    },
+    "ru": {
+      "displayName": "Max",
+      "tagline": "Произношение и ритм",
+      "description": "Терпеливый партнёр, сосредоточенный на естественном произношении и ритме фраз."
+    },
+    "ko": {
+      "displayName": "Max",
+      "tagline": "발음과 리듬",
+      "description": "자연스러운 발음과 문장 리듬에 집중하는 인내심 있는 파트너입니다."
+    },
+    "hi": {
+      "displayName": "Max",
+      "tagline": "उच्चारण और लय",
+      "description": "प्राकृतिक उच्चारण और वाक्य लय पर केंद्रित धैर्यवान साथी।"
+    },
+    "pt": {
+      "displayName": "Max",
+      "tagline": "Pronúncia e ritmo",
+      "description": "Um parceiro paciente focado em pronúncia natural e ritmo das frases."
+    },
+    "zh": {
+      "displayName": "Max",
+      "tagline": "发音与节奏",
+      "description": "专注自然发音和句子节奏的耐心伙伴。"
+    }
+  },
+  "mira": {
+    "en": {
+      "displayName": "Mira",
+      "tagline": "Quick practice",
+      "description": "Supports your progress with short, intensive sessions, repetition, and feedback."
+    },
+    "tr": {
+      "displayName": "Mira",
+      "tagline": "Hızlı pratik",
+      "description": "Kısa ve yoğun seanslarla hızlı tekrar ve geri bildirimle ilerlemeni destekler."
+    },
+    "de": {
+      "displayName": "Mira",
+      "tagline": "Schnelles Training",
+      "description": "Unterstützt deinen Fortschritt mit kurzen, intensiven Einheiten, Wiederholung und Feedback."
+    },
+    "fr": {
+      "displayName": "Mira",
+      "tagline": "Pratique rapide",
+      "description": "Soutient votre progression avec des sessions courtes et intenses, répétition et retours."
+    },
+    "it": {
+      "displayName": "Mira",
+      "tagline": "Pratica rapida",
+      "description": "Sostiene i tuoi progressi con sessioni brevi e intense, ripetizione e feedback."
+    },
+    "es": {
+      "displayName": "Mira",
+      "tagline": "Práctica rápida",
+      "description": "Apoya tu progreso con sesiones cortas e intensas, repetición y retroalimentación."
+    },
+    "ja": {
+      "displayName": "Mira",
+      "tagline": "クイック練習",
+      "description": "短く集中的なセッションと反復、フィードバックで上達をサポートします。"
+    },
+    "ru": {
+      "displayName": "Mira",
+      "tagline": "Быстрая практика",
+      "description": "Поддерживает прогресс короткими интенсивными сессиями, повторением и обратной связью."
+    },
+    "ko": {
+      "displayName": "Mira",
+      "tagline": "빠른 연습",
+      "description": "짧고 집중적인 세션, 반복, 피드백으로 성장을 지원합니다."
+    },
+    "hi": {
+      "displayName": "Mira",
+      "tagline": "त्वरित अभ्यास",
+      "description": "छोटे, गहन सत्र, दोहराव और फीडबैक से प्रगति का समर्थन करता है।"
+    },
+    "pt": {
+      "displayName": "Mira",
+      "tagline": "Prática rápida",
+      "description": "Apoia seu progresso com sessões curtas e intensas, repetição e feedback."
+    },
+    "zh": {
+      "displayName": "Mira",
+      "tagline": "快速练习",
+      "description": "通过简短高强度课程、重复和反馈支持你的进步。"
+    }
+  }
+}

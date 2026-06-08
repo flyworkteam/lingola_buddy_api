@@ -1,0 +1,17 @@
+{
+  "watch": [
+    "app.js",
+    "routes",
+    "services",
+    "middleware",
+    "models",
+    "repositories",
+    "realtime",
+    "config",
+    "utils",
+    "data"
+  ],
+  "ext": "js,json",
+  "ignore": ["node_modules", "scripts", "docs"],
+  "delay": "500ms"
+}
