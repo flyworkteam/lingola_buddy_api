@@ -29,6 +29,8 @@ class OpenAIRealtimeSession extends EventEmitter {
 
     this.instructions = opts.instructions || 'You are a helpful AI assistant.';
     this.language = opts.language || 'tr';
+    this.appLanguage = opts.appLanguage || this.language;
+    this.bilingualEnglishCoaching = !!opts.bilingualEnglishCoaching;
     this.temperature = typeof opts.temperature === 'number' ? opts.temperature : 0.8;
     this.model = opts.model || DEFAULT_MODEL;
 
@@ -149,13 +151,23 @@ class OpenAIRealtimeSession extends EventEmitter {
       ar: 'Arabic',
     };
     const defaultLanguage = LANG_NAMES[this.language] || this.language;
+    const appLanguageName = LANG_NAMES[this.appLanguage] || this.appLanguage;
+
+    const languageRules = this.bilingualEnglishCoaching && this.appLanguage !== 'en'
+      ? `LANGUAGE RULES (very important):
+- The learner's app/UI language is ${appLanguageName} (code: ${this.appLanguage}).
+- Start in ${appLanguageName}: greet warmly and briefly set up the English practice (1–2 short sentences).
+- Then switch to English for the practice portion — you may switch without waiting for the user.
+- During English practice, speak ONLY English unless one short ${appLanguageName} clarification is truly needed.
+- If the user speaks English, stay in English. If they use ${appLanguageName} during practice, gently encourage English and continue in English.`
+      : `LANGUAGE RULES (very important):
+- Always respond in the exact same language the user is speaking right now.
+- If you haven't heard the user yet, respond in ${defaultLanguage} (code: ${this.language}).
+- Never switch language unless the user does first.`;
 
     const instructions = `${this.instructions}
 
-LANGUAGE RULES (very important):
-- Always respond in the exact same language the user is speaking right now.
-- If you haven't heard the user yet, respond in ${defaultLanguage} (code: ${this.language}).
-- Never switch language unless the user does first.
+${languageRules}
 
 TONE:
 - Natural phone call — short, warm replies (1–2 sentences).`;
