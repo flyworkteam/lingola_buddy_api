@@ -17,6 +17,7 @@ router.post('/practice/me', authenticate, async (req, res, next) => {
   try {
     const tz = parseTimezoneOffsetMinutes(req);
     const minutes = parseInt(req.body?.minutes, 10) || 0;
+    const durationSeconds = parseInt(req.body?.durationSeconds, 10) || 0;
     const wordsLearned = parseInt(req.body?.wordsLearned, 10) || 0;
     const accuracyPercent =
       req.body?.accuracyPercent != null
@@ -24,6 +25,7 @@ router.post('/practice/me', authenticate, async (req, res, next) => {
         : null;
     const data = await StreakService.recordPractice(req.user.id, {
       minutes,
+      durationSeconds,
       wordsLearned,
       accuracyPercent,
       timezoneOffsetMinutes: tz,
