@@ -55,9 +55,17 @@ class StreakRepository {
     return m ? m[1] : null;
   }
 
+  static _daySecondsFromRow(row) {
+    if (!row) return 0;
+    if (row.duration_seconds != null && row.duration_seconds !== '') {
+      return Number(row.duration_seconds) || 0;
+    }
+    return (Number(row.minutes) || 0) * 60;
+  }
+
   static async getPracticeMapInRange(userId, fromStr, toStr) {
     const [rows] = await pool.execute(
-      `SELECT practice_date, minutes, words_learned, accuracy_percent
+      `SELECT practice_date, minutes, duration_seconds, words_learned, accuracy_percent
        FROM user_practice_days
        WHERE user_id = ? AND practice_date >= ? AND practice_date <= ?`,
       [userId, fromStr, toStr]
@@ -65,8 +73,10 @@ class StreakRepository {
     const map = new Map();
     for (const r of rows) {
       const dateStr = StreakRepository.parseDateField(r.practice_date);
+      const durationSeconds = StreakRepository._daySecondsFromRow(r);
       map.set(dateStr, {
-        minutes: Number(r.minutes) || 0,
+        minutes: Math.floor(durationSeconds / 60),
+        durationSeconds,
         wordsLearned: Number(r.words_learned) || 0,
         accuracyPercent: r.accuracy_percent != null ? Number(r.accuracy_percent) : 0,
       });
@@ -74,18 +84,33 @@ class StreakRepository {
     return map;
   }
 
-  static async recordPracticeDay(userId, dateStr, { minutes = 0, wordsLearned = 0, accuracyPercent = null } = {}) {
+  static async recordPracticeDay(
+    userId,
+    dateStr,
+    { minutes = 0, durationSeconds = 0, wordsLearned = 0, accuracyPercent = null } = {}
+  ) {
     await this.ensureStatsRow(userId);
 
-    const mins = Math.max(0, minutes);
+    const secsToAdd = Math.max(
+      0,
+      durationSeconds > 0 ? durationSeconds : minutes * 60
+    );
+    if (secsToAdd <= 0 && wordsLearned <= 0 && accuracyPercent == null) {
+      return;
+    }
     const words = Math.max(0, wordsLearned);
 
     const [dayRows] = await pool.execute(
-      `SELECT minutes, words_learned, accuracy_percent, accuracy_samples
+      `SELECT minutes, duration_seconds, words_learned, accuracy_percent, accuracy_samples
        FROM user_practice_days WHERE user_id = ? AND practice_date = ? LIMIT 1`,
       [userId, dateStr]
     );
     const dayRow = dayRows[0];
+    const prevSeconds = StreakRepository._daySecondsFromRow(dayRow);
+    const newTotalSeconds = prevSeconds + secsToAdd;
+    const prevMinutes = Math.floor(prevSeconds / 60);
+    const newMinutes = Math.floor(newTotalSeconds / 60);
+    const minutesDelta = newMinutes - prevMinutes;
     let dayAccuracy = dayRow?.accuracy_percent ?? null;
     let daySamples = dayRow?.accuracy_samples ?? 0;
     if (accuracyPercent != null && !Number.isNaN(accuracyPercent)) {
@@ -99,23 +124,40 @@ class StreakRepository {
       }
     }
 
-    const wordsDelta = words > 0 ? words : Math.max(1, Math.floor(mins * 2));
+    const wordsDelta =
+      words > 0 ? words : Math.max(1, Math.ceil(secsToAdd / 30));
     const dayWordsTotal = (dayRow?.words_learned ?? 0) + wordsDelta;
 
     if (dayRow) {
       await pool.execute(
         `UPDATE user_practice_days
-         SET minutes = minutes + ?, words_learned = ?,
+         SET minutes = ?, duration_seconds = ?, words_learned = ?,
              accuracy_percent = ?, accuracy_samples = ?
          WHERE user_id = ? AND practice_date = ?`,
-        [mins, dayWordsTotal, dayAccuracy, daySamples, userId, dateStr]
+        [
+          newMinutes,
+          newTotalSeconds,
+          dayWordsTotal,
+          dayAccuracy,
+          daySamples,
+          userId,
+          dateStr,
+        ]
       );
     } else {
       await pool.execute(
         `INSERT INTO user_practice_days
-         (user_id, practice_date, minutes, words_learned, accuracy_percent, accuracy_samples)
-         VALUES (?, ?, ?, ?, ?, ?)`,
-        [userId, dateStr, mins, wordsDelta, dayAccuracy, daySamples]
+         (user_id, practice_date, minutes, duration_seconds, words_learned, accuracy_percent, accuracy_samples)
+         VALUES (?, ?, ?, ?, ?, ?, ?)`,
+        [
+          userId,
+          dateStr,
+          newMinutes,
+          newTotalSeconds,
+          wordsDelta,
+          dayAccuracy,
+          daySamples,
+        ]
       );
     }
 
@@ -159,7 +201,7 @@ class StreakRepository {
       [
         streak,
         dateStr,
-        mins,
+        minutesDelta,
         wordsDelta,
         accuracyPercentStored,
         accuracySamples,
@@ -181,12 +223,14 @@ class StreakRepository {
         wordsLearned: 0,
         accuracyPercent: 0,
       };
+      const durationSeconds =
+        dayData.durationSeconds ?? (dayData.minutes ?? 0) * 60;
       week.push({
         dayKey: DAY_KEYS[i],
         date: dateStr,
-        practiced: (dayData.minutes ?? 0) > 0,
+        practiced: durationSeconds >= 30,
         isToday: dateStr === todayStr,
-        minutes: dayData.minutes,
+        minutes: Math.floor(durationSeconds / 60),
         wordsLearned: dayData.wordsLearned,
         accuracyPercent: dayData.accuracyPercent,
       });
