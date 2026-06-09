@@ -1082,24 +1082,24 @@ class VoiceChatServerV2 {
       }
     }
 
-    // Language priority:
-    //   1. Language of the most recent user message in chat history
-    //      (only if chat actually has content)
-    //   2. clientLang — the device/app locale sent by the Flutter client
-    //   3. user.nativeLang (device locale stored on signup)
+    // App/UI language priority:
+    //   1. clientLang — device/app locale sent by the Flutter client
+    //   2. user.nativeLang (stored on signup)
+    //   3. Language of recent chat history (only if chat has content)
     //   4. 'tr' as last-resort fallback
+    // English practice still starts in app language; the tutor switches to
+    // English once the coaching portion begins (see bilingual prompt rules).
     const detectedFromChat = this._detectChatLanguage(historyRows);
-    // English lesson calls: tutor speaks English to teach English.
-    const conversationLang = lesson || freeTalk
-      ? 'en'
-      : detectedFromChat ||
-        clientLang ||
-        user?.nativeLang ||
-        'tr';
+    const appLanguage =
+      clientLang ||
+      user?.nativeLang ||
+      detectedFromChat ||
+      'tr';
+    const conversationLang = appLanguage;
     console.log(
       `[VCv2] 🌐 [${connectionId}] language = ${conversationLang} ` +
-      `(chat=${detectedFromChat || '-'} client=${clientLang || '-'} ` +
-      `native=${user?.nativeLang || '-'})`
+      `(client=${clientLang || '-'} native=${user?.nativeLang || '-'} ` +
+      `chat=${detectedFromChat || '-'} lesson=${!!lesson} freeTalk=${!!freeTalk})`
     );
 
     const personaKey = _derivePersonaKey(consultant);
@@ -1113,6 +1113,8 @@ class VoiceChatServerV2 {
       connectionId, userId, consultantId, chatId, user, consultant, ws,
       videoMode: !!videoMode,
       language: conversationLang,
+      appLanguage,
+      englishPracticeActive: false,
       personaKey,
       persona,
       gender,
@@ -1241,6 +1243,8 @@ class VoiceChatServerV2 {
       ctx.openai = new OpenAIRealtimeSession({
         instructions,
         language: conversationLang,
+        appLanguage,
+        bilingualEnglishCoaching: !!(lesson || freeTalk),
         temperature: 0.8,
       });
 
@@ -1539,6 +1543,9 @@ class VoiceChatServerV2 {
           `${ctx.language} → ${detectedLang}`
         );
         ctx.language = detectedLang;
+        if (detectedLang === 'en') {
+          ctx.englishPracticeActive = true;
+        }
         languageSwitched = true;
       }
 
@@ -1635,6 +1642,9 @@ class VoiceChatServerV2 {
 
     openai.on('response_done', () => {
       const finalText = ctx.pendingAssistantText.trim();
+      if (finalText) {
+        this._syncConversationLanguageFromAssistant(ctx, finalText);
+      }
       if (finalText && !ctx.pendingAssistantSaved) {
         ctx.pendingAssistantSaved = true;
         this._saveAssistantMessage(ctx, finalText).catch((e) => {
@@ -2248,11 +2258,22 @@ class VoiceChatServerV2 {
     try { ctx.ws.close(1000, 'idle timeout'); } catch (_) { }
   }
 
+  _syncConversationLanguageFromAssistant(ctx, text) {
+    if (!text || (!ctx.lesson && !ctx.freeTalk)) return;
+    const detected = detectLanguage(text);
+    if (detected === 'en') {
+      ctx.englishPracticeActive = true;
+      ctx.language = 'en';
+      return;
+    }
+    if (!ctx.englishPracticeActive) {
+      ctx.language = ctx.appLanguage || ctx.language;
+    }
+  }
+
   async _triggerGreeting(ctx) {
     if (ctx.closed) return;
-    const lang = ctx.lesson || ctx.freeTalk
-      ? 'en'
-      : ctx.language || ctx.user?.nativeLang || 'tr';
+    const lang = ctx.appLanguage || ctx.language || ctx.user?.nativeLang || 'tr';
     const userName = resolveUserDisplayName(ctx.user, ctx.clientDisplayName);
 
     const names = ctx.consultant?.names || {};
@@ -2260,9 +2281,7 @@ class VoiceChatServerV2 {
       names[lang] || names.en ||
       Object.values(names).find((v) => typeof v === 'string') || '';
 
-    const greetingText = ctx.lesson
-      ? pickLessonGreeting(ctx.lesson, lang, { userName, coachName })
-      : pickGreetingPhrase(lang, { userName, coachName });
+    const greetingText = pickGreetingPhrase(lang, { userName, coachName });
 
     console.log(`[VCv2] 👋 [${ctx.connectionId}] canned greeting: "${greetingText}"`);
     this._speakCanned(ctx, greetingText, { endAfter: false, persist: false });
@@ -2319,27 +2338,52 @@ class VoiceChatServerV2 {
     const cefr = LessonRepository.normalizeCefr(user?.proficiency);
     const isDailyConversation =
       lesson?.id && String(lesson.id).startsWith('dc_');
-    const freeTalkBlock =
-      !lesson && freeTalk
-        ? `\n\nOPEN ENGLISH PRACTICE (mandatory — speak ONLY English):\n` +
-          `- This is a free conversation, not a fixed lesson. The learner chooses the topic.\n` +
-          `- Match vocabulary, sentence length, and speaking pace to CEFR ${cefr}.\n` +
-          `- Follow the learner's interests — hobbies, work, travel, daily life, opinions, anything they bring up.\n` +
-          `- Keep it natural and supportive; gently correct errors without breaking the flow.\n` +
-          `- If they use another language, warmly encourage English.\n` +
+    const appLangName = langName(conversationLang);
+    const bilingualSetupBlock =
+      conversationLang !== 'en' && (lesson || freeTalk)
+        ? `\n\nBILINGUAL ENGLISH COACHING (mandatory):\n` +
+          `- The learner's app language is ${appLangName} (code: ${conversationLang}).\n` +
+          `- Open in ${appLangName}: one warm greeting plus a brief note that you'll practice English together.\n` +
+          `- Then switch to English for the practice dialogue — you may switch without waiting for the user.\n` +
+          `- During English practice, speak ONLY English unless one short ${appLangName} clarification is truly needed.\n` +
           nameRuleLine
         : '';
+    const freeTalkBlock =
+      !lesson && freeTalk
+        ? conversationLang === 'en'
+          ? `\n\nOPEN ENGLISH PRACTICE (mandatory — speak ONLY English):\n` +
+            `- This is a free conversation, not a fixed lesson. The learner chooses the topic.\n` +
+            `- Match vocabulary, sentence length, and speaking pace to CEFR ${cefr}.\n` +
+            `- Follow the learner's interests — hobbies, work, travel, daily life, opinions, anything they bring up.\n` +
+            `- Keep it natural and supportive; gently correct errors without breaking the flow.\n` +
+            `- If they use another language, warmly encourage English.\n` +
+            nameRuleLine
+          : bilingualSetupBlock +
+            `\n\nOPEN ENGLISH PRACTICE:\n` +
+            `- After the brief ${appLangName} setup, practice in English only.\n` +
+            `- Match vocabulary, sentence length, and speaking pace to CEFR ${cefr}.\n` +
+            `- Follow the learner's interests — hobbies, work, travel, daily life, opinions, anything they bring up.\n` +
+            `- Keep it natural and supportive; gently correct errors without breaking the flow.\n`
+        : '';
     const lessonBlock = lesson
-      ? isDailyConversation
-        ? `\n\nDAILY ENGLISH CONVERSATION (mandatory — speak ONLY English):\n${lesson.tutorPrompt}\n` +
-          `- Open with a warm, casual greeting for this chat topic.\n` +
-          `- Keep the vibe like everyday small talk, not a formal classroom lesson.\n` +
-          `- If the learner uses another language, gently encourage English.\n` +
-          nameRuleLine
-        : `\n\nENGLISH LESSON (mandatory — speak ONLY English):\n${lesson.tutorPrompt}\n` +
-          `- Open the call in character for this scenario.\n` +
-          `- If the learner uses another language, gently encourage English.\n` +
-          nameRuleLine
+      ? conversationLang === 'en'
+        ? isDailyConversation
+          ? `\n\nDAILY ENGLISH CONVERSATION (mandatory — speak ONLY English):\n${lesson.tutorPrompt}\n` +
+            `- Open with a warm, casual greeting for this chat topic.\n` +
+            `- Keep the vibe like everyday small talk, not a formal classroom lesson.\n` +
+            `- If the learner uses another language, gently encourage English.\n` +
+            nameRuleLine
+          : `\n\nENGLISH LESSON (mandatory — speak ONLY English):\n${lesson.tutorPrompt}\n` +
+            `- Open the call in character for this scenario.\n` +
+            `- If the learner uses another language, gently encourage English.\n` +
+            nameRuleLine
+        : bilingualSetupBlock +
+          (isDailyConversation
+            ? `\n\nDAILY ENGLISH CONVERSATION:\n${lesson.tutorPrompt}\n` +
+              `- After the brief ${appLangName} setup, run this chat topic in English only.\n` +
+              `- Keep the vibe like everyday small talk, not a formal classroom lesson.\n`
+            : `\n\nENGLISH LESSON:\n${lesson.tutorPrompt}\n` +
+              `- After the brief ${appLangName} setup, run this lesson scenario in English only.\n`)
       : '';
 
     const boundaryBlock = lesson
@@ -2353,10 +2397,14 @@ class VoiceChatServerV2 {
           `- Briefly redirect off-topic chat back to the lesson.\n` +
           `- You are ${coachName}, a friendly English tutor — not a general chatbot.\n`
       : freeTalk
-        ? `\nFREE CONVERSATION FOCUS:\n` +
-          `- You are ${coachName}, a friendly English tutor for open practice.\n` +
-          `- No fixed scenario — let the learner lead the topic.\n` +
-          `- Stay in English at a ${cefr} level.\n`
+        ? conversationLang === 'en'
+          ? `\nFREE CONVERSATION FOCUS:\n` +
+            `- You are ${coachName}, a friendly English tutor for open practice.\n` +
+            `- No fixed scenario — let the learner lead the topic.\n` +
+            `- Stay in English at a ${cefr} level.\n`
+          : `\nFREE CONVERSATION FOCUS:\n` +
+            `- You are ${coachName}, a friendly English tutor for open practice.\n` +
+            `- Brief ${appLangName} welcome, then English practice at CEFR ${cefr}.\n`
         : `\nTOPIC BOUNDARIES (STRICT):\n` +
         `- You ONLY coach within your specialty listed above. Do not give ` +
         `advice, answers, facts, opinions, explanations or examples on ` +
