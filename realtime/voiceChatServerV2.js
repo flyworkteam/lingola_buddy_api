@@ -268,26 +268,60 @@ function _personalizeLessonOpener(opener, userName) {
   return text;
 }
 
+function _stripDuplicateGreetingPrefix(baseRaw, lang) {
+  const text = String(baseRaw || '').trim();
+  if (!text) return text;
+  const prefixes = GREETING_PREFIX[lang] || GREETING_PREFIX.tr;
+  for (const p of prefixes) {
+    const escaped = p.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const re = new RegExp(`^${escaped}[,!.\\s]+`, 'iu');
+    if (re.test(text)) {
+      const stripped = text.replace(re, '').trim();
+      return stripped || text;
+    }
+  }
+  return text;
+}
+
+function _capitalizePhrase(text) {
+  const s = String(text || '').trim();
+  if (!s) return s;
+  return s.charAt(0).toUpperCase() + s.slice(1);
+}
+
 function pickGreetingPhrase(lang, { userName, coachName } = {}) {
   const pool = GREETING_PHRASES[lang] || GREETING_PHRASES.tr;
   const prefixes = GREETING_PREFIX[lang] || GREETING_PREFIX.tr;
   const prefix = prefixes[Math.floor(Math.random() * prefixes.length)];
   const baseRaw = pool[Math.floor(Math.random() * pool.length)];
-  const base = baseRaw.replace(/^(\p{L}+)([,!.\s]*)/u, '').trim() || baseRaw;
+  const base = _stripDuplicateGreetingPrefix(baseRaw, lang);
   const safeUser = _sanitizeGreetingName(userName);
   const safeCoach = _sanitizeGreetingName(coachName);
   if (safeUser && Math.random() < 0.72) {
-    const forms = [
-      `${prefix} ${safeUser}, ${base}`,
-      `${prefix} ${safeUser}! ${base.charAt(0).toUpperCase()}${base.slice(1)}`,
-      `Hey ${safeUser}, ${base}`,
-    ];
+    const forms =
+      lang === 'tr'
+        ? [
+            `${prefix} ${safeUser}, ${base}`,
+            `${prefix} ${safeUser}! ${_capitalizePhrase(base)}`,
+          ]
+        : [
+            `${prefix} ${safeUser}, ${base}`,
+            `${prefix} ${safeUser}! ${_capitalizePhrase(base)}`,
+            `Hey ${safeUser}, ${base}`,
+          ];
     return forms[Math.floor(Math.random() * forms.length)].replace(/\s{2,}/g, ' ').trim();
   }
   if (safeCoach && Math.random() < 0.35) {
-    return `${prefix}, ben ${safeCoach}. ${base}`.replace(/\s{2,}/g, ' ').trim();
+    if (lang === 'tr') {
+      return `${prefix}, ben ${safeCoach}. ${_capitalizePhrase(base)}`
+        .replace(/\s{2,}/g, ' ')
+        .trim();
+    }
+    return `${prefix}, I'm ${safeCoach}. ${_capitalizePhrase(base)}`
+      .replace(/\s{2,}/g, ' ')
+      .trim();
   }
-  return `${prefix}, ${base}`.replace(/\s{2,}/g, ' ').trim();
+  return `${prefix}, ${_capitalizePhrase(base)}`.replace(/\s{2,}/g, ' ').trim();
 }
 
 /** Ders karşılamasını isimle kişiselleştirir; sabit greeting_opener yerine varyant döner. */
