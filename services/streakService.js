@@ -8,11 +8,18 @@ class StreakService {
 
   static async recordPractice(
     userId,
-    { minutes = 0, wordsLearned = 0, accuracyPercent = null, timezoneOffsetMinutes = 0 } = {}
+    {
+      minutes = 0,
+      durationSeconds = 0,
+      wordsLearned = 0,
+      accuracyPercent = null,
+      timezoneOffsetMinutes = 0,
+    } = {}
   ) {
     const todayStr = localTodayString(timezoneOffsetMinutes);
     await StreakRepository.recordPracticeDay(userId, todayStr, {
       minutes,
+      durationSeconds,
       wordsLearned,
       accuracyPercent,
     });
