@@ -20,6 +20,14 @@ async function main() {
     console.log('[MIGRATE] user_practice_days.minutes added');
   }
 
+  if (!(await columnExists('user_practice_days', 'duration_seconds'))) {
+    await pool.query(
+      `ALTER TABLE user_practice_days
+       ADD COLUMN duration_seconds INT NOT NULL DEFAULT 0 AFTER minutes`
+    );
+    console.log('[MIGRATE] user_practice_days.duration_seconds added');
+  }
+
   for (const col of [
     ['user_practice_days', 'words_learned', 'INT NOT NULL DEFAULT 0'],
     ['user_practice_days', 'accuracy_percent', 'INT NULL DEFAULT NULL'],
