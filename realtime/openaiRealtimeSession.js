@@ -156,10 +156,11 @@ class OpenAIRealtimeSession extends EventEmitter {
     const languageRules = this.bilingualEnglishCoaching && this.appLanguage !== 'en'
       ? `LANGUAGE RULES (very important):
 - The learner's app/UI language is ${appLanguageName} (code: ${this.appLanguage}).
-- Start in ${appLanguageName}: greet warmly and briefly set up the English practice (1–2 short sentences).
-- Then switch to English for the practice portion — you may switch without waiting for the user.
-- During English practice, speak ONLY English unless one short ${appLanguageName} clarification is truly needed.
-- If the user speaks English, stay in English. If they use ${appLanguageName} during practice, gently encourage English and continue in English.`
+- PHASE 1: Speak ONLY ${appLanguageName}. Introduce today's topic and what they will learn. No English yet.
+- PHASE 2: Keep ALL framing in ${appLanguageName}. English appears ONLY as the exact phrase being taught.
+- Example pattern (Turkish app): "Merhaba! 'Bugün nasılsın?' demek için: How are you?"
+- Never send a full reply in English. Never skip Phase 1.
+- When the learner repeats an English phrase, praise/correct in ${appLanguageName} and model the English again.`
       : `LANGUAGE RULES (very important):
 - Always respond in the exact same language the user is speaking right now.
 - If you haven't heard the user yet, respond in ${defaultLanguage} (code: ${this.language}).
