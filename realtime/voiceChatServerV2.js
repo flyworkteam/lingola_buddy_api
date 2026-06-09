@@ -342,6 +342,42 @@ function langName(code) {
 }
 
 /**
+ * System prompt block for non-English app UI: setup in app language, then
+ * phrase-by-phrase teaching with English only inside the taught line.
+ */
+function _bilingualTeachingBlock(appLangName, appLangCode, cefr, nameRuleLine) {
+  return (
+    `\n\nBILINGUAL ENGLISH TEACHING (mandatory — follow this exact flow):\n` +
+    `PHASE 1 — SETUP (speak ONLY in ${appLangName}, code: ${appLangCode}):\n` +
+    `- After the greeting, use 1–3 turns entirely in ${appLangName}.\n` +
+    `- Explain which topic or scenario you will work on today and what phrases they will learn.\n` +
+    `- Check they are ready. Do NOT use English in Phase 1.\n` +
+    `PHASE 2 — TEACH (explain in ${appLangName}; English ONLY for the target phrase):\n` +
+    `- All explanations, transitions, praise, and corrections stay in ${appLangName}.\n` +
+    `- English appears ONLY as the phrase being taught — never a full English reply.\n` +
+    `- Use this pattern every time:\n` +
+    `  • "${appLangName === 'Turkish' ? "Merhaba! 'Bugün nasılsın?' demek için şöyle söylersin: How are you?" : `[${appLangName} explanation of the phrase] … [English phrase]`}"\n` +
+    `  • "${appLangName === 'Turkish' ? "'Teşekkür ederim' İngilizce: Thank you." : `[${appLangName} meaning] … [English phrase]`}"\n` +
+    `- Teach ONE useful phrase per turn at CEFR ${cefr}; invite the learner to repeat it.\n` +
+    `- If they mispronounce, correct in ${appLangName} and model the English again clearly.\n` +
+    `- Do NOT jump into free English conversation — keep the teach-and-repeat pattern.\n` +
+    nameRuleLine
+  );
+}
+
+function _isBilingualEnglishCoaching(ctx) {
+  return !!(ctx?.bilingualEnglishCoaching);
+}
+
+/**
+ * During bilingual coaching the learner repeats English phrases while the
+ * tutor keeps framing in the app language — accept those turns.
+ */
+function _allowUserEnglishDuringCoaching(ctx, detectedLang) {
+  return _isBilingualEnglishCoaching(ctx) && detectedLang === 'en';
+}
+
+/**
  * Heuristic language detector from a short text snippet. Uses unicode
  * range checks first (for non-Latin scripts), then diacritic hints for
  * Latin-script languages. Returns a 2-letter code or null if unsure.
@@ -1115,6 +1151,8 @@ class VoiceChatServerV2 {
       language: conversationLang,
       appLanguage,
       englishPracticeActive: false,
+      bilingualEnglishCoaching:
+        !!(lesson || freeTalk) && appLanguage !== 'en',
       personaKey,
       persona,
       gender,
@@ -1536,7 +1574,8 @@ class VoiceChatServerV2 {
       if (
         detectedLang &&
         detectedLang !== ctx.language &&
-        raw.length >= 10
+        raw.length >= 10 &&
+        !_isBilingualEnglishCoaching(ctx)
       ) {
         console.log(
           `[VCv2] 🌐 [${ctx.connectionId}] language switch (user-driven): ` +
@@ -1557,7 +1596,11 @@ class VoiceChatServerV2 {
           );
           return;
         }
-        if (_isLanguageMismatch(raw, ctx.language) && raw.length < 60) {
+        if (
+          _isLanguageMismatch(raw, ctx.language) &&
+          raw.length < 60 &&
+          !_allowUserEnglishDuringCoaching(ctx, detectedLang)
+        ) {
           console.log(
             `[VCv2] 🙊 [${ctx.connectionId}] dropped (lang mismatch, expected=${ctx.language}): ` +
             `"${raw.substring(0, 60)}"`
@@ -2260,6 +2303,10 @@ class VoiceChatServerV2 {
 
   _syncConversationLanguageFromAssistant(ctx, text) {
     if (!text || (!ctx.lesson && !ctx.freeTalk)) return;
+    if (_isBilingualEnglishCoaching(ctx)) {
+      ctx.language = ctx.appLanguage || ctx.language;
+      return;
+    }
     const detected = detectLanguage(text);
     if (detected === 'en') {
       ctx.englishPracticeActive = true;
@@ -2339,14 +2386,14 @@ class VoiceChatServerV2 {
     const isDailyConversation =
       lesson?.id && String(lesson.id).startsWith('dc_');
     const appLangName = langName(conversationLang);
-    const bilingualSetupBlock =
+    const bilingualTeachingBlock =
       conversationLang !== 'en' && (lesson || freeTalk)
-        ? `\n\nBILINGUAL ENGLISH COACHING (mandatory):\n` +
-          `- The learner's app language is ${appLangName} (code: ${conversationLang}).\n` +
-          `- Open in ${appLangName}: one warm greeting plus a brief note that you'll practice English together.\n` +
-          `- Then switch to English for the practice dialogue — you may switch without waiting for the user.\n` +
-          `- During English practice, speak ONLY English unless one short ${appLangName} clarification is truly needed.\n` +
-          nameRuleLine
+        ? _bilingualTeachingBlock(
+            appLangName,
+            conversationLang,
+            cefr,
+            nameRuleLine,
+          )
         : '';
     const freeTalkBlock =
       !lesson && freeTalk
@@ -2358,12 +2405,11 @@ class VoiceChatServerV2 {
             `- Keep it natural and supportive; gently correct errors without breaking the flow.\n` +
             `- If they use another language, warmly encourage English.\n` +
             nameRuleLine
-          : bilingualSetupBlock +
+          : bilingualTeachingBlock +
             `\n\nOPEN ENGLISH PRACTICE:\n` +
-            `- After the brief ${appLangName} setup, practice in English only.\n` +
-            `- Match vocabulary, sentence length, and speaking pace to CEFR ${cefr}.\n` +
-            `- Follow the learner's interests — hobbies, work, travel, daily life, opinions, anything they bring up.\n` +
-            `- Keep it natural and supportive; gently correct errors without breaking the flow.\n`
+            `- Phase 1: agree on a topic in ${appLangName} (hobbies, work, travel, daily life).\n` +
+            `- Phase 2: teach useful phrases for that topic with the explain-in-${appLangName} + English-phrase pattern.\n` +
+            `- Match vocabulary and sentence length to CEFR ${cefr}.\n`
         : '';
     const lessonBlock = lesson
       ? conversationLang === 'en'
@@ -2377,13 +2423,14 @@ class VoiceChatServerV2 {
             `- Open the call in character for this scenario.\n` +
             `- If the learner uses another language, gently encourage English.\n` +
             nameRuleLine
-        : bilingualSetupBlock +
+        : bilingualTeachingBlock +
           (isDailyConversation
             ? `\n\nDAILY ENGLISH CONVERSATION:\n${lesson.tutorPrompt}\n` +
-              `- After the brief ${appLangName} setup, run this chat topic in English only.\n` +
-              `- Keep the vibe like everyday small talk, not a formal classroom lesson.\n`
+              `- Phase 1: in ${appLangName}, introduce this daily chat topic and what phrases they will learn.\n` +
+              `- Phase 2: teach phrases for this scenario with the bilingual pattern; do not free-chat in English.\n`
             : `\n\nENGLISH LESSON:\n${lesson.tutorPrompt}\n` +
-              `- After the brief ${appLangName} setup, run this lesson scenario in English only.\n`)
+              `- Phase 1: in ${appLangName}, introduce this lesson scenario and today's goal.\n` +
+              `- Phase 2: teach scenario phrases with the bilingual pattern; stay in character.\n`)
       : '';
 
     const boundaryBlock = lesson
@@ -2404,7 +2451,8 @@ class VoiceChatServerV2 {
             `- Stay in English at a ${cefr} level.\n`
           : `\nFREE CONVERSATION FOCUS:\n` +
             `- You are ${coachName}, a friendly English tutor for open practice.\n` +
-            `- Brief ${appLangName} welcome, then English practice at CEFR ${cefr}.\n`
+            `- Phase 1 in ${appLangName}: pick a topic together.\n` +
+            `- Phase 2: teach phrases — English only inside each taught line.\n`
         : `\nTOPIC BOUNDARIES (STRICT):\n` +
         `- You ONLY coach within your specialty listed above. Do not give ` +
         `advice, answers, facts, opinions, explanations or examples on ` +
