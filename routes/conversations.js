@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { authenticate } = require('../middleware/auth');
 const ConversationService = require('../services/conversationService');
+const ChatTutorVoiceService = require('../services/chatTutorVoiceService');
 
 router.get('/me', authenticate, async (req, res, next) => {
   try {
@@ -48,6 +49,19 @@ router.delete('/tutor/:tutorId', authenticate, async (req, res, next) => {
     }
     res.json({ success: true, data: { deleted: true } });
   } catch (e) {
+    next(e);
+  }
+});
+
+router.post('/tutor/:tutorId/synthesize-voice', authenticate, async (req, res, next) => {
+  try {
+    const text = (req.body?.text || '').toString();
+    const data = await ChatTutorVoiceService.synthesize(req.params.tutorId, text);
+    res.json({ success: true, data });
+  } catch (e) {
+    if (e.statusCode) {
+      return res.status(e.statusCode).json({ success: false, error: e.message });
+    }
     next(e);
   }
 });
