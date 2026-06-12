@@ -22,6 +22,7 @@ function wrapUpload(middleware) {
 
 router.get('/health', panelController.health);
 router.get('/analyse', panelController.analyse);
+router.get('/voices', panelController.listVoices);
 
 router.get('/users/premium-ids', panelController.listPremiumUserIds);
 router.get('/users', panelController.listUsers);

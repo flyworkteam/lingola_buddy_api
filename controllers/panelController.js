@@ -1,4 +1,5 @@
 const panelService = require('../services/panelService');
+const panelVoiceService = require('../services/panelVoiceService');
 const { CONTRACT_VERSION } = require('../utils/panelMappers');
 
 function parsePagination(query) {
@@ -206,9 +207,25 @@ const uploadTutorRiv = async (req, res, next) => {
   }
 };
 
+const listVoices = async (req, res, next) => {
+  try {
+    const result = await panelVoiceService.listVoices({
+      gender: req.query.gender?.trim() || '',
+    });
+    res.json({
+      contractVersion: CONTRACT_VERSION,
+      data: result.data,
+      meta: result.meta,
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
 module.exports = {
   health,
   analyse,
+  listVoices,
   listUsers,
   getUser,
   patchUser,
