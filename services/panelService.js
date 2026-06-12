@@ -28,7 +28,23 @@ async function safeQuery(sql, params = [], fallback = []) {
   }
 }
 
-function userSelectSql() {
+function userSelectSqlBase() {
+  return `
+    SELECT
+      u.*,
+      (SELECT MAX(ut.created_at) FROM user_tokens ut WHERE ut.user_id = u.id) AS last_token_at,
+      0 AS conversation_count,
+      0 AS message_count,
+      0 AS streak_days,
+      0 AS total_practice_minutes,
+      0 AS is_premium,
+      NULL AS premium_plan,
+      NULL AS premium_expires_at
+    FROM users u
+  `;
+}
+
+function userSelectSqlFull() {
   return `
     SELECT
       u.*,
@@ -56,6 +72,20 @@ function userSelectSql() {
       WHERE s1.status IN ('active', 'trial')
     ) sub ON sub.user_id = u.id
   `;
+}
+
+async function queryUserRows(sqlSuffix, params) {
+  const variants = [userSelectSqlFull, userSelectSqlBase];
+  for (const buildSql of variants) {
+    try {
+      return await db.query(`${buildSql()} ${sqlSuffix}`, params);
+    } catch (error) {
+      const retryable =
+        error?.code === 'ER_NO_SUCH_TABLE' || error?.code === 'ER_BAD_FIELD_ERROR';
+      if (!retryable) throw error;
+    }
+  }
+  return [];
 }
 
 async function getAnalyse() {
@@ -262,13 +292,11 @@ async function listUsers({ page, limit, search, premium }) {
   );
   const total = countRows[0]?.total || 0;
 
-  const rows = await safeQuery(
-    `${userSelectSql()}
-    ${where}
+  const rows = await queryUserRows(
+    `${where}
     ORDER BY u.account_created_date DESC
     LIMIT ? OFFSET ?`,
-    [...params, limit, offset],
-    []
+    [...params, limit, offset]
   );
 
   return {
@@ -278,7 +306,7 @@ async function listUsers({ page, limit, search, premium }) {
 }
 
 async function getUserById(id) {
-  const rows = await safeQuery(`${userSelectSql()} WHERE u.id = ?`, [id], []);
+  const rows = await queryUserRows('WHERE u.id = ?', [id]);
   if (!rows.length) return null;
   return mapPanelUser(rows[0]);
 }
