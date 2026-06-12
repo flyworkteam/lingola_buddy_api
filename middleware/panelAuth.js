@@ -16,9 +16,16 @@ function panelAuth(req, res, next) {
     });
   }
 
-  const key = req.headers['x-panel-api-key'];
+  const headerKey = req.headers['x-panel-api-key'];
+  const auth = req.headers.authorization || '';
+  const bearer = auth.startsWith('Bearer ') ? auth.slice(7).trim() : '';
+  const key = headerKey || bearer;
   if (!key || key !== expected) {
-    return res.status(401).json({ success: false, error: 'Invalid panel API key' });
+    return res.status(401).json({
+      contractVersion: '2',
+      error: 'UNAUTHORIZED',
+      message: 'Invalid panel API key',
+    });
   }
 
   next();
