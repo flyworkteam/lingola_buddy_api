@@ -55,22 +55,15 @@ function userSelectSqlFull() {
         WHERE c2.user_id = u.id) AS message_count,
       uls.streak_days,
       uls.total_practice_minutes,
-      CASE WHEN sub.user_id IS NOT NULL THEN 1 ELSE 0 END AS is_premium,
-      sub.plan_code AS premium_plan,
-      sub.expires_at AS premium_expires_at
+      uls.words_learned_count,
+      uls.accuracy_percent,
+      (SELECT COUNT(DISTINCT upd.practice_date)
+        FROM user_practice_days upd WHERE upd.user_id = u.id) AS practice_days_count,
+      0 AS is_premium,
+      NULL AS premium_plan,
+      NULL AS premium_expires_at
     FROM users u
     LEFT JOIN user_learning_stats uls ON uls.user_id = u.id
-    LEFT JOIN (
-      SELECT s1.user_id, s1.plan_code, s1.expires_at
-      FROM subscriptions s1
-      INNER JOIN (
-        SELECT user_id, MAX(started_at) AS max_started
-        FROM subscriptions
-        WHERE status IN ('active', 'trial')
-        GROUP BY user_id
-      ) latest ON latest.user_id = s1.user_id AND latest.max_started = s1.started_at
-      WHERE s1.status IN ('active', 'trial')
-    ) sub ON sub.user_id = u.id
   `;
 }
 
@@ -206,26 +199,63 @@ async function getAnalyse() {
     []
   );
 
-  const learnLangRows = await db.query(
-    `SELECT learn_language_code AS code, COUNT(*) AS count
+  const authRows = await db.query(
+    `SELECT credential AS code, COUNT(*) AS count
      FROM users
-     WHERE learn_language_code IS NOT NULL AND learn_language_code != ''
-     GROUP BY learn_language_code
-     ORDER BY count DESC
-     LIMIT 12`
+     GROUP BY credential
+     ORDER BY count DESC`
   );
 
-  const proficiencyRows = await db.query(
-    `SELECT proficiency AS code, COUNT(*) AS count
-     FROM users
-     WHERE proficiency IS NOT NULL AND proficiency != ''
-     GROUP BY proficiency
-     ORDER BY count DESC
-     LIMIT 12`
+  const streakRows = await safeQuery(
+    `SELECT
+      CASE
+        WHEN streak_days >= 7 THEN '7+ gün'
+        WHEN streak_days >= 3 THEN '3-6 gün'
+        WHEN streak_days >= 1 THEN '1-2 gün'
+        ELSE 'Seri yok'
+      END AS label,
+      COUNT(*) AS count
+     FROM user_learning_stats
+     GROUP BY label
+     ORDER BY count DESC`,
+    [],
+    []
   );
 
-  const totalLearn = learnLangRows.reduce((s, r) => s + Number(r.count || 0), 0);
-  const totalProf = proficiencyRows.reduce((s, r) => s + Number(r.count || 0), 0);
+  const lessonProgressRows = await safeQuery(
+    `SELECT status AS code, COUNT(*) AS count
+     FROM user_daily_conversation_progress
+     GROUP BY status
+     ORDER BY count DESC`,
+    [],
+    []
+  );
+
+  const learningStatsCount = (
+    await safeQuery(`SELECT COUNT(*) AS count FROM user_learning_stats`, [], [{ count: 0 }])
+  )[0];
+  const practiceUsersCount = (
+    await safeQuery(
+      `SELECT COUNT(DISTINCT user_id) AS count FROM user_practice_days`,
+      [],
+      [{ count: 0 }]
+    )
+  )[0];
+  const totalConversationsCount = (
+    await safeQuery(`SELECT COUNT(*) AS count FROM conversations`, [], [{ count: 0 }])
+  )[0];
+
+  const totalAuth = authRows.reduce((s, r) => s + Number(r.count || 0), 0);
+  const totalStreak = streakRows.reduce((s, r) => s + Number(r.count || 0), 0);
+  const totalLessonProgress = lessonProgressRows.reduce((s, r) => s + Number(r.count || 0), 0);
+
+  const mapDist = (rows, total, labelKey = 'code') =>
+    rows.map((r) => ({
+      code: r[labelKey] || r.code,
+      label: r.label || r[labelKey] || r.code,
+      count: Number(r.count || 0),
+      percent: total ? Math.round((Number(r.count || 0) / total) * 1000) / 10 : 0,
+    }));
 
   return {
     summary: {
@@ -240,22 +270,24 @@ async function getAnalyse() {
     daily,
     audienceInsights: {
       totals: {
-        usersWithLearnLanguage: totalLearn,
-        usersWithProficiency: totalProf,
+        usersWithLearningStats: Number(learningStatsCount?.count || 0),
+        usersWithPracticeDays: Number(practiceUsersCount?.count || 0),
+        totalConversations: Number(totalConversationsCount?.count || 0),
         premiumUsers: Number(premiumTotals?.premiumUsers || 0),
       },
-      learnLanguages: learnLangRows.map((r) => ({
-        code: r.code,
-        label: r.code,
-        count: Number(r.count),
-        percent: totalLearn ? Math.round((Number(r.count) / totalLearn) * 1000) / 10 : 0,
+      authProviders: mapDist(authRows, totalAuth).map((r) => ({
+        ...r,
+        label:
+          r.code === 'google'
+            ? 'Google'
+            : r.code === 'apple'
+              ? 'Apple'
+              : r.code === 'guest'
+                ? 'Misafir'
+                : r.code,
       })),
-      proficiencyLevels: proficiencyRows.map((r) => ({
-        code: r.code,
-        label: r.code,
-        count: Number(r.count),
-        percent: totalProf ? Math.round((Number(r.count) / totalProf) * 1000) / 10 : 0,
-      })),
+      streakBuckets: mapDist(streakRows, totalStreak, 'label'),
+      lessonProgressStatuses: mapDist(lessonProgressRows, totalLessonProgress),
     },
     tutorsSummary: topTutors.length
       ? {
@@ -321,24 +353,6 @@ async function patchUser(id, body) {
   if (body.displayName !== undefined) {
     updates.push('username = ?');
     values.push(body.displayName);
-  }
-
-  const extras = body.extras || {};
-  if (extras.nativeLang !== undefined) {
-    updates.push('native_lang = ?');
-    values.push(extras.nativeLang);
-  }
-  if (extras.learnLanguageCode !== undefined) {
-    updates.push('learn_language_code = ?');
-    values.push(extras.learnLanguageCode);
-  }
-  if (extras.proficiency !== undefined) {
-    updates.push('proficiency = ?');
-    values.push(extras.proficiency);
-  }
-  if (extras.dailyGoal !== undefined) {
-    updates.push('daily_goal = ?');
-    values.push(extras.dailyGoal);
   }
 
   if (updates.length) {
